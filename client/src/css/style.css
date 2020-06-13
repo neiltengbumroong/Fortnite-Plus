@@ -1,0 +1,32 @@
+.home-container {
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.home-nav {
+  text-align: center;
+  background-color: #e3dede;
+  padding: 2em;
+}
+
+.home-nav a {
+  font-weight: 900;
+  font-size: 24px;
+  color: black;
+  margin: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5em;
+  transition: 0.3s ease;  
+}
+
+.background {
+  background-image: url("/fortnitehome.jpeg");
+}
+
+.stats-title {
+  color: white;
+  text-align: center;
+  background-color: #e3dede;
+}

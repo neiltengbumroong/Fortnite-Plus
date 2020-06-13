@@ -35,7 +35,7 @@ const headers =  {
 app.get('/stats', function(req,res) {
     request.get(statsURI + 'pc/ninja', { headers }, 
       (err, response, body) => { 
-        res.json(response.body);
+        res.json(body);
     });
 });
 
