@@ -36,13 +36,16 @@ app.get('/stats', function(req,res) {
     request.get(statsURI + 'pc/ninja', { headers }, 
       (err, response, body) => { 
         res.json(body);
+        
     });
 });
 
 app.get('/store', function(req,res) {
   request.get(storeURI, { headers }, 
     (err, response, body) => { 
-      res.json(body);
+      var obj = JSON.parse(body);
+      res.json(obj);
+      console.log(typeof(obj));
   });
 });
 

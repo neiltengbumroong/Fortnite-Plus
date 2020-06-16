@@ -197,8 +197,6 @@
   input[type="submit"]:focus,
   input[type="reset"]:focus,
   input[type="button"]:focus {
-    background-color: salmon;
-    border-color: salmon;
     outline: 1; }
   .button.button-primary,
   button.button-primary,
@@ -225,7 +223,7 @@
   
   /* Forms
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  input[type="email"],
+  /* input[type="email"],
   input[type="number"],
   input[type="search"],
   input[type="text"],
@@ -235,14 +233,13 @@
   textarea,
   select {
     height: 38px;
-    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    padding: 6px 10px; 
     background-color: #fff;
-    border: 2px solid salmon;
     border-radius: 4px;
     box-shadow: none;
-    box-sizing: border-box; }
+    box-sizing: border-box; } */
   /* Removes awkward default styles on some inputs for iOS */
-  input[type="email"],
+  /* input[type="email"],
   input[type="number"],
   input[type="search"],
   input[type="text"],
@@ -266,7 +263,7 @@
   input[type="password"]:focus,
   textarea:focus,
   select:focus {
-    border: 1px solid #33C3F0;
+    border: 1px solid black;
     outline: 0; }
   label,
   legend {
@@ -282,7 +279,7 @@
   label > .label-body {
     display: inline-block;
     margin-left: .5rem;
-    font-weight: normal; }
+    font-weight: normal; } */
   
   
   /* Lists

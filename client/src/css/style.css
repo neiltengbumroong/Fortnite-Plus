@@ -1,32 +1,83 @@
 .home-container {
-  margin-top: 5%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
-.home-nav {
+.nav-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.main-nav {
   text-align: center;
-  background-color: #e3dede;
-  padding: 2em;
+  background-color: #FFF;
+  padding: 1em;
+  box-shadow: 5px 5px 5px #aaaaaa;
 }
 
-.home-nav a {
+.main-nav a {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   margin: 0.5em;
   text-decoration: none;
-  text-transform: uppercase;
   padding: 1.5em;
   transition: 0.3s ease;  
 }
 
-.background {
-  background-image: url("/fortnitehome.jpeg");
+.search-title {
+  text-align: center;
+  margin-top: 3%;
 }
 
-.stats-title {
-  color: white;
+.search-form {
+  position: relative;
+}
+form.search-form input[type=text] {
+  padding: 1em;
+  flex-grow: 2;
+}
+
+input:focus {
+  outline: none;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+}
+
+.search-icon {
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 2%;
+  margin-left: 95%;
+}
+
+.search-icon:hover {
+  color: grey;
+}
+
+.box-wrapper {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.itemshop-box {
+  border: 1px solid grey;
+  height: 500px;
+  width: 400px;
   text-align: center;
-  background-color: #e3dede;
+}
+
+.challenge-box {
+  border: 1px solid grey;
+  height: 500px;
+  width: 400px;
+  text-align: center;
+  margin-left: 10%;;
 }
