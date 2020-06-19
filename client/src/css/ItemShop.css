@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+.item-shop-wrapper {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid grey;
+}
+
+.item-shop-header {
+  font-family: fortniteFont;
+  text-align: center;
+}
+
+.row-title-wrapper {
+  border: 1px solid grey; 
+}
+
+/* --------------------- Item Shop Header--------------------- */
+
+.item-shop-stats {
+  display: flex;
+  justify-content: center;
+}
+
+.stat-paragraph {
+  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: fortniteFont;
+  font-size: 25px;
+}
+
+/* --------------------- Items: General --------------------- */
+.row-title {
+  padding-left: 1%;
+  background-color: grey;
+  font-family: fortniteFont;
+}
+
+.row-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.item-shop-row-1 {
+  border: 1px solid grey;
+}
+
+.item-shop-row-2 {
+  border: 1px solid grey;
+}
+
+.item-shop-row-3 {
+  border: 1px solid grey;
+}
+
+/* --------------------- Items: Individual --------------------- */
+
+.item-wrapper {
+  margin-top: 0;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.item-description {
+  text-align: center;
+  font-family: fortniteFont;
+  font-size: 20px;
+  border-top: 3px solid black;
+}
+
+/* --------------------- Backgrounds for Items --------------------- */
+
+.legendary {
+  background: rgb(252,164,0);
+  background: radial-gradient(circle, rgba(252,164,0,1) 9%, rgba(144,94,1,1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.epic {
+  background: rgb(172,0,255);
+  background: radial-gradient(circle, rgba(172,0,255,1) 9%, rgba(110,0,163,1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.rare {
+  background: rgb(0, 201, 255);
+  background: radial-gradient(circle, rgba(0, 201, 255, 1) 9%, rgba(2, 120, 152, 1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.uncommon {
+  background: rgb(6,213,0);
+  background: radial-gradient(circle, rgba(6,213,0,1) 9%, rgba(3,122,0,1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.common {
+  background-color: black;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+/* --------------------- Fonts --------------------- */
+
+@font-face {
+  font-family: fortniteFont;
+  src: url('../fonts/BurbankBigCondensed-Black.otf');
+}

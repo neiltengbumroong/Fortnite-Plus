@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Router, Link } from "@reach/router";
-import './css/style.css';
+import { Link } from "@reach/router";
+import './css/Home.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 

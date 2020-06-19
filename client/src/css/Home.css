@@ -1,11 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
 .home-container {
   margin-left: 20%;
   margin-right: 20%;
 }
 
+/* --------------------- Fonts --------------------- */
+@font-face {
+  font-family: fortniteFont;
+  src: url('../fonts/BurbankBigCondensed-Black.otf');
+}
+
+/* --------------------- Navbar --------------------- */
+
 .nav-container {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .main-nav {
@@ -16,8 +28,9 @@
 }
 
 .main-nav a {
+  font-family: fortniteFont;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 25px;
   color: black;
   margin: 0.5em;
   text-decoration: none;
@@ -25,14 +38,17 @@
   transition: 0.3s ease;  
 }
 
+/* --------------------- Search Bar --------------------- */
+
 .search-title {
+  font-family: fortniteFont;
   text-align: center;
   margin-top: 3%;
 }
 
-.search-form {
+/* .search-form {
   position: relative;
-}
+} */
 form.search-form input[type=text] {
   padding: 1em;
   flex-grow: 2;
@@ -53,11 +69,14 @@ form {
   margin-left: 1%;
   margin-top: 2%;
   margin-left: 95%;
+  float: right;
 }
 
 .search-icon:hover {
   color: grey;
 }
+
+/* --------------------- Main Boxes --------------------- */
 
 .box-wrapper {
   width: 100%;

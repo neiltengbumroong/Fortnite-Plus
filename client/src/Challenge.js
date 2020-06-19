@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 // import Background from './Background.js';
 // import { Router, Link } from "@reach/router";
 
-import './css/style.css';
+import './css/Home.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 

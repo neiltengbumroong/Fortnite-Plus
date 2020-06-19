@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Router, Link } from "@reach/router";
+// import { Router, Link } from "@reach/router";
 import Navbar from './Navbar';
 //import Background from './Background.js';
 
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import './css/style.css';
+import './css/Home.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 
@@ -24,7 +24,9 @@ class HomePage extends Component {
     this.state = {
       content: '',
       items: [],
-      isFetchingItems: true
+      challenges: [],
+      isFetchingItems: true,
+      isFetchingChallenges: true
     }
 
     this.getStats = this.getStats.bind(this);
@@ -52,45 +54,55 @@ class HomePage extends Component {
   }
 
   getItems() {
+    this.setState({ isFetchingItems: true});
     axios.get(STORE_URL)
-      .then(res => {
-        this.setState({ items: res.data })
+      .then(res => {      
+        const slicedItems = res.data.slice(0, 5);
+        this.setState({ items: slicedItems })
       }) 
       .then(() => {
-        this.setState({ isFetchingItems: false})       
+        this.setState({ isFetchingItems: false});      
       })
   }
 
   getChallenges() {
+    this.setState({ isFetchingChallenges: true})
     axios.get(CHALLENGE_URL)
-      .then(res => {
-        console.log(res.data);
-      })
+    .then(res => {
+      const slicedChallenges = res.data.items.slice(0, 5);
+      this.setState({ challenges: slicedChallenges })
+      
+    }) 
+    .then(() => {
+      this.setState({ isFetchingChallenges: false})    
+    })
   }
 
   componentDidMount() {
     this.getItems();
-
+    this.getChallenges();
   }
 
- 
-
   render() {
-    console.log("rendered");
 
     let items = null;
+    let challenges = null;
+
     if (!this.state.isFetchingItems) {
       items = this.state.items.map((eachItem, i) =>
-        <div>
+        <div key={i}>
           <p>{eachItem.name}</p>
-        </div>
-      
+        </div>    
       )
-      console.log(items);
     }
-    
 
-    // this.getItems();
+    if (!this.state.isFetchingChallenges) {
+      challenges = this.state.challenges.map((eachChallenge, i) =>
+        <div key={i}>
+          <p>{eachChallenge.metadata[1].value}</p>
+        </div>    
+      )
+    }
     return (
       <>
       <div className="home-container">
@@ -122,6 +134,7 @@ class HomePage extends Component {
         </div>
         <div className="challenge-box">
           <h3>Challenges</h3>
+          {challenges}
         </div>
       </div>       
       </>   
