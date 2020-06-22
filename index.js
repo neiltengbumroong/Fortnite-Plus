@@ -9,6 +9,8 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
+
+
 app.use(cors());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,41 +23,51 @@ app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname + '/static/index.html'));
 })
 
-const statsURI = 'https://api.fortnitetracker.com/v1/profile/';
-const storeURI = 'https://api.fortnitetracker.com/v1/store';
-const challengeURI = 'https://api.fortnitetracker.com/v1/challenges';
+const fortniteAPIIO = require("fortnite-api-io")
+const key = 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
+const fortniteAPI = new fortniteAPIIO(key);
 
-// TRN API key badf74d3-2421-4a13-87f9-cddb33a0dabc
-
-// post to the player stats route and get headers based on nickname
-const headers =  { 
-  'TRN-Api-Key': 'badf74d3-2421-4a13-87f9-cddb33a0dabc' 
-};
 
 app.get('/stats', function(req,res) {
-    request.get(statsURI + 'pc/ninja', { headers }, 
-      (err, response, body) => { 
-        res.json(body);
-        
-    });
+      
 });
 
-app.get('/store', function(req,res) {
-  request.get(storeURI, { headers }, 
-    (err, response, body) => { 
-      var obj = JSON.parse(body);
-      res.json(obj);
-      console.log(typeof(obj));
-  });
+app.get('/store', async function(req, res) {
+  const items = await fortniteAPI.getDailyShop();
+  res.json(items);
+});
+
+app.get('/upcomingstore', async function(req, res) {
+  const items = await fortniteAPI.listUpcomingItems();
+  res.json(items);
+});
+
+app.get('/challenges', async function(req, res) {
+  const challenges = await fortniteAPI.listChallenges();
+  res.json(challenges);
+});
+
+app.get('/status', async function(req, res) {
+  const status = await fortniteAPI.getStatus();
+  res.json(status);
+});
+
+app.get('/itemdetails', async function(req, res) {
+  const details = await fortniteAPI.getItemDetails(req.query.id);
+  res.json(details);
+});
+
+app.get('/achievements', async function(req, res) {
+  const achievements = await fortniteAPI.getAchievements();
+  res.json(achievements);
+});
+
+app.get('/battlepass', async function(req, res) {
+  const pass = await fortniteAPI.getBattlepassRewards();
+  res.json(pass);
 });
 
 
-app.get('/challenges', function(req,res) {;
-  request.get(challengeURI, { headers }, 
-    (err, response, body) => { 
-      res.json(body);
-  });
-});
 
 app.listen(port, (req, res) => {
   console.log("listening on port 5000!");
