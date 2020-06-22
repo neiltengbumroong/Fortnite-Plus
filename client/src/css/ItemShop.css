@@ -19,21 +19,51 @@
   border: 1px solid grey; 
 }
 
-/* --------------------- Item Shop Header--------------------- */
+/* --------------------- Item Shop Header --------------------- */
 
 .item-shop-stats {
   display: flex;
   justify-content: center;
-  margin-left: 5%;
 }
 
 .stat-paragraph {
-  margin-bottom: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
   font-family: fortniteFont;
   font-size: 25px;
+  margin-left: auto;
+  margin-right: 2%;
+  margin-bottom: 0;
 }
+
+/* --------------------- Buttons --------------------- */
+
+.item-buttons {
+  display: flex;
+  align-items: flex-start;
+  font-family: fortniteFont;
+  font-size: 20px;
+  
+
+}
+
+.item-button {
+  border: 1px solid grey;
+  background-color: transparent;
+  padding: 0 30px;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  white-space: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+  color: grey;
+}
+
+.item-button:hover, .item-button:focus {
+  color: white;
+  background-color: grey;
+  border: 1px solid grey;
+  outline: 0;
+}
+
 
 /* --------------------- Items: General --------------------- */
 .row-title {

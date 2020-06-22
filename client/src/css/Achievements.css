@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+.achieve-wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4%;
+}
+
+.achieve-header {
+  text-align: center;
+  font-family: fortniteFont;
+  font-size: 25px;
+}
+
+.achieve-title {
+  font-family: fortniteFont;
+  font-size: 45px;
+}
+
+/* --------------------- Fonts --------------------- */
+
+@font-face {
+  font-family: fortniteFont;
+  src: url('../fonts/BurbankBigCondensed-Black.otf');
+}

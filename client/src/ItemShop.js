@@ -11,7 +11,6 @@ import './css/Home.css';
 import './css/ItemShop.css';
 import './css/skeleton.css';
 import './css/normalize.css';
-import { Redirect } from 'react-router-dom';
 
 const STORE_URL = 'http://localhost:5000/store';
 const UPCOMING_URL = 'http://localhost:5000/upcomingstore';
@@ -27,11 +26,13 @@ class ItemShop extends Component {
       items: [],
       upcomingItems: [],
       isLoading: true,
-      isLoadingUpcoming: true
+      isLoadingUpcoming: true,
+      showCurrent: true
     };
 
     this.getItems = this.getItems.bind(this);
     this.getUpcomingItems = this.getUpcomingItems.bind(this);
+    this.changeMode = this.changeMode.bind(this);
   }
 
   getItems() {
@@ -77,6 +78,12 @@ class ItemShop extends Component {
     this.state.items.community.forEach(function(element) {
       specialArr.push(element);
     })
+  }
+
+  // true: current
+  // false: upcoming
+  changeMode(mode) {
+    this.setState({ showCurrent: mode })
   }
 
   componentDidMount() {
@@ -163,59 +170,27 @@ class ItemShop extends Component {
           {upcomingItems}
         </div>
       </>     
-    );
-
-    
-    
+    );  
 
     return(
       <>
       <div className="nav-container">  
         <Navbar />
       </div>
-      
-
       <div className="item-shop-wrapper">
         <h2 className="item-shop-header"> Fortnite Item Shop</h2>
-        <div className="item-shop-stats">
+        {/* <div className="item-shop-stats">
           <p className="stat-paragraph">Items In Shop: {this.state.isLoading? 0 : 
           this.state.items.daily.length + this.state.items.featured.length + specialArr.length}</p>
+          
+        </div> */}
+
+        <div className="item-buttons">
+          <button className="item-button" onClick={() => this.changeMode(true)}> Current </button>
+          <button className="item-button" onClick={() => this.changeMode(false)}> Upcoming </button>
           <p className="stat-paragraph">Shop Updating In: <Countdown /></p>
         </div>
-
-         <div>
-          <nav className="main-nav">
-            <Link to="/current">Current</Link>{" "}
-            <Link to="/upcoming">Upcoming</Link>
-          </nav>
-        
-          <Router>
-            <Current path="current" />
-            <Upcoming path="upcoming" />
-          </Router>
-        </div> 
-
-        <Current />
-
-        
-        {/* <div className="item-shop-row-1">
-          <h5 className="row-title"> Featured Items</h5>
-          <div className="row-items">
-            {featuredItems}
-          </div>        
-        </div>
-        <div className="item-shop-row-2">
-          <h5 className="row-title"> Daily Items</h5>
-          <div className="row-items">
-            {dailyItems}
-          </div>     
-        </div>
-        <div className="item-shop-row-3">
-          <h5 className="row-title"> Special Items</h5>   
-          <div className="row-items">
-            {specialItems}
-          </div>      
-        </div> */}
+        {this.state.showCurrent ? <Current /> : <Upcoming />} 
       </div>
 
       {this.props.children}

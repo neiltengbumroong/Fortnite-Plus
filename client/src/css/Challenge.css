@@ -27,6 +27,56 @@
   font-family: fortniteFont;
 }
 
+.weekly-challenges-wrapper {
+  border: 2px solid black;
+}
+
+.weekly-title {
+  text-align: center;
+  font-family: fortniteFont;
+  margin-top: 2%;
+}
+/* --------------------- Challenges - Individual --------------------- */
+.challenge-description {
+  border-radius: 5px;
+  border: 2px solid black;
+  font-family: fortniteFont;
+  font-size: 20px;
+  height: 250px;
+  width: 200px;
+  padding: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  overflow: auto;
+}
+
+/* .progress, .xp-reward {
+  display: flex;
+} */
+
+.progress-other {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+
+.title-other {
+  margin: 0px;
+  padding: 0px;
+}
+
+.name-other {
+  text-align: center;
+}
+
+/* --------------------- Challenges - General --------------------- */
+
+.challenge-row-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /* --------------------- Fonts --------------------- */
 
 @font-face {
