@@ -10,7 +10,10 @@ class Navbar extends Component {
         <nav className="main-nav">
           <Link to="/">Home</Link>{" "}
           <Link to="/ItemShop">Item Shop</Link> {" "}
-          <Link to="/Challenge">Challenges</Link>
+          <Link to="/Challenge">Challenges</Link> {" "}     
+          <Link to="/Achievements">Achievements</Link> {" "}
+          <Link to="/BattlePass">Battle Pass</Link> {" "}
+          <Link to="/Miscellaneous">Miscellaneous</Link> 
         </nav>
     )
   }

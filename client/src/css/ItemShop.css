@@ -11,6 +11,7 @@
 
 .item-shop-header {
   font-family: fortniteFont;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -23,6 +24,7 @@
 .item-shop-stats {
   display: flex;
   justify-content: center;
+  margin-left: 5%;
 }
 
 .stat-paragraph {

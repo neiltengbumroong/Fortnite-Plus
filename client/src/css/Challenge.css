@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+/* --------------------- Headers and Main Wrappers --------------------- */
+
+.challenges-box-wrapper {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.challenges-title {
+  font-family: fortniteFont;
+  font-size: 45px;
+  text-align: center;
+}
+
+.challenges-stats {
+  font-family: fortniteFont;
+  text-align: center;
+  font-size: 25px;
+}
+
+.weekly-header {
+  background-color: grey;
+  font-family: fortniteFont;
+}
+
+/* --------------------- Fonts --------------------- */
+
+@font-face {
+  font-family: fortniteFont;
+  src: url('../fonts/BurbankBigCondensed-Black.otf');
+}

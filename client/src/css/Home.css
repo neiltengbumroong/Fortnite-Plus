@@ -16,8 +16,6 @@
 /* --------------------- Navbar --------------------- */
 
 .nav-container {
-  margin-left: 15%;
-  margin-right: 15%;
 }
 
 .main-nav {
@@ -99,4 +97,72 @@ form {
   width: 400px;
   text-align: center;
   margin-left: 10%;;
+}
+
+/* --------------------- Item Box --------------------- */
+
+.item-wrapper {
+  margin-top: 0;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  border: 2px solid black;
+}
+
+.item-description {
+  text-align: center;
+  font-family: fortniteFont;
+  font-size: 10px;
+  border-top: 2px solid black;
+}
+
+.row-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+/* --------------------- Backgrounds for Items --------------------- */
+
+.legendary {
+  background: rgb(252,164,0);
+  background: radial-gradient(circle, rgba(252,164,0,1) 9%, rgba(144,94,1,1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.epic {
+  background: rgb(172,0,255);
+  background: radial-gradient(circle, rgba(172,0,255,1) 9%, rgba(110,0,163,1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.rare {
+  background: rgb(0, 201, 255);
+  background: radial-gradient(circle, rgba(0, 201, 255, 1) 9%, rgba(2, 120, 152, 1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.uncommon {
+  background: rgb(6,213,0);
+  background: radial-gradient(circle, rgba(6,213,0,1) 9%, rgba(3,122,0,1) 100%);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+
+.common {
+  background-color: black;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
 }

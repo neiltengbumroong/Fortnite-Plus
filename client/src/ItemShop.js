@@ -2,42 +2,40 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 // import Background from './Background.js';
-// import { Router, Link } from "@reach/router";
+import { Router, Link } from "@reach/router";
+import Item from './Item';
 import Countdown from './Countdown';
+import { normalizeRarity, chooseBackground } from './utils/index.js';
 
 import './css/Home.css';
 import './css/ItemShop.css';
 import './css/skeleton.css';
 import './css/normalize.css';
+import { Redirect } from 'react-router-dom';
 
 const STORE_URL = 'http://localhost:5000/store';
+const UPCOMING_URL = 'http://localhost:5000/upcomingstore';
 
-const legendaries = ["fine", "legendary"];
-const epics = ["epic", "quality"];
-const rares = ["rare", "sturdy"];
-const uncommons = ["uncommon", "handmade"];
 
-var dailyArr = [];
-var weeklyArr = [];
 var specialArr = [];
 
+/* ----------------TODO: Upcoming items display -----------------*/
 class ItemShop extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [],
-      dailyItems: [],
-      isFetchingItems: true,
+      upcomingItems: [],
+      isLoading: true,
+      isLoadingUpcoming: true
     };
 
     this.getItems = this.getItems.bind(this);
-    this.sortItems = this.sortItems.bind(this);
-    this.chooseBackground = this.chooseBackground.bind(this);
-    this.normalizeRarity = this.normalizeRarity.bind(this);
+    this.getUpcomingItems = this.getUpcomingItems.bind(this);
   }
 
   getItems() {
-    this.setState({ isFetchingItems: true});
+    this.setState({ isLoading: true});
     axios.get(STORE_URL)
       .then(res => {      
         this.setState({ items: res.data })
@@ -46,158 +44,101 @@ class ItemShop extends Component {
         this.sortItems();
       })
       .then(() => {
-        console.log(this.state.dailyItems);
-        this.setState({ isFetchingItems: false});      
+        this.setState({ isLoading: false});      
+      })
+      .catch((error) => {
+        window.location.reload();
       })
   }
 
+  getUpcomingItems() {
+    this.setState({ isLoadingUpcoming: true});
+    axios.get(UPCOMING_URL)
+      .then(res => {      
+        this.setState({ upcomingItems: res.data.items })
+      }) 
+      .then(() => {
+        this.setState({ isLoadingUpcoming: false});
+      })
+
+  }
+
   sortItems() {
-    // reset arrays to prevent overlap from previous render
-    weeklyArr = [];
-    dailyArr = [];
+    // reset array to prevent overlap from previous render
     specialArr = [];
 
-    // loop through items and sort into arrays
-    this.state.items.forEach(function(element) {
-      if (element.storeCategory.includes("Daily")) {
-        dailyArr.push(element);
-      }
-      else if (element.storeCategory.includes("Weekly")) {
-        weeklyArr.push(element);
-      }
-      else {
-        specialArr.push(element);
-      }
+    // loop through items and sort into array
+    this.state.items.specialDaily.forEach(function(element) {
+      specialArr.push(element);
     })
-  }
-
-  normalizeRarity(string) {
-    string = string.toLowerCase();
-
-    if (legendaries.includes(string)) {
-      return "Legendary";
-    }
-    else if (epics.includes(string)) {
-      return "Epic";
-    }
-    else if (rares.includes(string)) {
-      return "Rare";
-    }
-    else if (uncommons.includes(string)) {
-      return "Uncommon";
-    }
-    return "Common";
-  }
-
-  chooseBackground(string) {
-    
-    string = string.toLowerCase();
-
-    if (legendaries.includes(string)) {
-      return "legendary";
-    }
-    else if (epics.includes(string)) {
-      return "epic";
-    }
-    else if (rares.includes(string)) {
-      return "rare";
-    }
-    else if (uncommons.includes(string)) {
-      return "uncommon";
-    }
-    return "common";
+    this.state.items.specialFeatured.forEach(function(element) {
+      specialArr.push(element);
+    })
+    this.state.items.community.forEach(function(element) {
+      specialArr.push(element);
+    })
   }
 
   componentDidMount() {
     this.getItems();
-    
+    this.getUpcomingItems();
   }
 
-  // BRWeeklyStoreFront
-  // BRDailyStoreFront
-  // Special/Promotion
 
-  /*
-  Rarities:
-  Orange: Legendary, Fine
-  Purple: Epic, Quality
-  Blue: Rare, Sturdy
-  Green: Uncommon, Handmade
-  Common: 
-  */
 
   render() {
     let dailyItems = null;
-    let weeklyItems = null;
+    let featuredItems = null;
     let specialItems = null;
+    let upcomingItems = null;
     
 
-    // avoid mapping on empty items (for first render only)
-    if (!this.state.isFetchingItems) {  
+    //avoid mapping on empty items (for first render only)
+    if (!this.state.isLoading) {  
       // daily items
-      dailyItems = dailyArr.map((eachItem, i) =>
-        <div className="item-wrapper" key={i}>
-          <div className={(this.chooseBackground(eachItem.rarity))}>
-            <img src={eachItem.imageUrl} alt="Fortnite shop preview" height="250" width="250"/>
-          </div>   
-          <div className="item-description">
-            <p><b>Name: </b>{eachItem.name} <br></br>
-              <b>Rarity: </b>{this.normalizeRarity(eachItem.rarity)} <br></br>
-              <b>Price: </b>{eachItem.vBucks}
-              </p>
-          </div>    
+      dailyItems = this.state.items.daily.map((eachItem, i) =>
+        <div className="item-wrapper" key={i}>    
+          <Link to={`${eachItem.id}`}>
+            <img src={eachItem.full_background} alt="Fortnite shop preview" height="250" width="250"/>
+          </Link>
         </div>    
       )
 
-      // weekly items
-      weeklyItems = weeklyArr.map((eachItem, i) =>
-        <div className="item-wrapper" key={i}>
-          <div className={(this.chooseBackground(eachItem.rarity))}>
-            <img src={eachItem.imageUrl} alt="Fortnite shop preview" height="250" width="250"/>
-          </div>   
-          <div className="item-description">
-            <p><b>Name: </b>{eachItem.name} <br></br>
-              <b>Rarity: </b>{this.normalizeRarity(eachItem.rarity)} <br></br>
-              <b>Price: </b>{eachItem.vBucks}
-              </p>
-          </div>    
-        </div>    
+      // featured items
+      featuredItems = this.state.items.featured.map((eachItem, i) =>
+        <div className="item-wrapper" key={i}>    
+          <Link to={`${eachItem.id}`}>
+            <img src={eachItem.full_background} alt="Fortnite shop preview" height="250" width="250"/>
+          </Link>{" "}    
+        </div> 
       )
 
       // special items
       specialItems = specialArr.map((eachItem, i) =>
-        <div className="item-wrapper" key={i}>
-          <div className={(this.chooseBackground(eachItem.rarity))}>
-            <img src={eachItem.imageUrl} alt="Fortnite shop preview" height="250" width="250"/>
-          </div>   
-          <div className="item-description">
-            <p><b>Name: </b>{eachItem.name} <br></br>
-              <b>Rarity: </b>{this.normalizeRarity(eachItem.rarity)} <br></br>
-              <b>Price: </b>{eachItem.vBucks}
-              </p>
-          </div>    
+        <div className="item-wrapper" key={i}>    
+          <Link to={`${eachItem.id}`}>
+            <img src={eachItem.full_background} alt="Fortnite shop preview" height="250" width="250"/>
+          </Link>{" "}      
+        </div>    
+      )   
+    }
+
+    if (!this.state.isLoadingUpcoming) {
+      upcomingItems = this.state.upcomingItems.map((eachItem, i) =>
+        <div className="item-wrapper" key={i}>    
+          <Link to={`${eachItem.id}`}>
+            <img src={eachItem.images.full_background} alt="Fortnite shop preview" height="250" width="250"/>
+          </Link>
         </div>    
       )
     }
 
-    return(
+    let Current = () => (
       <>
-      <div className="home-container">
-        <div className="nav-container">  
-            <Navbar />
-        </div>
-      </div>
-
-      <div className="item-shop-wrapper">
-        <h2 className="item-shop-header"> Item Shop</h2>
-        <div className="item-shop-stats">
-          <p className="stat-paragraph">Items In Shop: {this.state.items.length}</p>
-          <p className="stat-paragraph">Shop Updating In: <Countdown /></p>
-        </div>
         <div className="item-shop-row-1">
-          <h5 className="row-title"> Weekly Items</h5>
+          <h5 className="row-title"> Featured Items</h5>
           <div className="row-items">
-            {weeklyItems}
+            {featuredItems}
           </div>        
         </div>
         <div className="item-shop-row-2">
@@ -212,7 +153,72 @@ class ItemShop extends Component {
             {specialItems}
           </div>      
         </div>
+      </>
+    );
+
+    let Upcoming = () => (
+      <>
+        <h5 className="row-title"> Upcoming Items</h5>
+        <div className="row-items">
+          {upcomingItems}
+        </div>
+      </>     
+    );
+
+    
+    
+
+    return(
+      <>
+      <div className="nav-container">  
+        <Navbar />
       </div>
+      
+
+      <div className="item-shop-wrapper">
+        <h2 className="item-shop-header"> Fortnite Item Shop</h2>
+        <div className="item-shop-stats">
+          <p className="stat-paragraph">Items In Shop: {this.state.isLoading? 0 : 
+          this.state.items.daily.length + this.state.items.featured.length + specialArr.length}</p>
+          <p className="stat-paragraph">Shop Updating In: <Countdown /></p>
+        </div>
+
+         <div>
+          <nav className="main-nav">
+            <Link to="/current">Current</Link>{" "}
+            <Link to="/upcoming">Upcoming</Link>
+          </nav>
+        
+          <Router>
+            <Current path="current" />
+            <Upcoming path="upcoming" />
+          </Router>
+        </div> 
+
+        <Current />
+
+        
+        {/* <div className="item-shop-row-1">
+          <h5 className="row-title"> Featured Items</h5>
+          <div className="row-items">
+            {featuredItems}
+          </div>        
+        </div>
+        <div className="item-shop-row-2">
+          <h5 className="row-title"> Daily Items</h5>
+          <div className="row-items">
+            {dailyItems}
+          </div>     
+        </div>
+        <div className="item-shop-row-3">
+          <h5 className="row-title"> Special Items</h5>   
+          <div className="row-items">
+            {specialItems}
+          </div>      
+        </div> */}
+      </div>
+
+      {this.props.children}
           
       </>
     )

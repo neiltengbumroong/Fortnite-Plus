@@ -1,0 +1,50 @@
+/* --------------------- Fonts --------------------- */
+@font-face {
+  font-family: fortniteFont;
+  src: url('../fonts/BurbankBigCondensed-Black.otf');
+}
+
+.item-title {
+  font-size: 20px;
+  /* text-align: center; */
+  margin-top: 0;
+  font-family: fortniteFont;
+}
+
+.item-header {
+  padding: 0px;
+  margin: 0px;
+}
+
+.item-span {
+  padding: 0px;
+  margin: 0px;
+}
+
+.item-row-wrapper {
+  font-family: fortniteFont;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.item-image {
+  padding-right: 2.5%;
+}
+
+
+
+.item-details {
+  padding-left: 2.5%;
+} 
+
+
+
+.item-hr {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 2px solid black;
+}
