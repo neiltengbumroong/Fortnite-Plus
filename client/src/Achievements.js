@@ -38,12 +38,20 @@ class Achievements extends Component {
 
     if (!this.state.isLoading) {
       achievements = this.state.data.achievements.map((element, i) => 
-        <div key={i} className="achievement-wrapper">
-          <p>{element.name}</p>
-          <img src={element.image} height="50" width="50" alt="achievement preview"/>
+        <div key={i} className="achievement-ind-wrapper">
+          <div className="achievement-ind-pic">
+            <div className="achievement-ind-pic-wrapper">
+              <p>{element.name}</p>
+              <img src={element.image} height="50" width="50" alt="achievement preview"/>
+            </div>         
+          </div>
+          <div className="achievement-ind-description">
+            <p>{element.description}</p>
+          </div>
+          
 
         </div>
-    )
+      )
     }
     return (
       <>
@@ -51,11 +59,13 @@ class Achievements extends Component {
           <Navbar />
         </div>
 
-        <div className="achieve-wrapper">
+        <div className="achieve-overall-wrapper">
           <div className="achieve-header">
             <h3 className="achieve-title">Fortnite Season {this.state.data.season} Achievements</h3>
           </div>
-        {achievements}
+          <div className="achievement-wrapper">
+            {achievements}
+          </div>
         </div>
       </>
 

@@ -7,7 +7,7 @@ import Item from './Item';
 import Countdown from './Countdown';
 import { normalizeRarity, chooseBackground } from './utils/index.js';
 
-import './css/Home.css';
+// import './css/Home.css';
 import './css/ItemShop.css';
 import './css/skeleton.css';
 import './css/normalize.css';

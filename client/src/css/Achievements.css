@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.achieve-wrapper {
+.achieve-overall-wrapper {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 4%;
@@ -19,6 +19,40 @@
   font-size: 45px;
 }
 
+.achievement-wrapper {
+  columns: 3 auto;
+  
+}
+
+/* --------------------- Achievements - Individual  --------------------- */
+
+.achievement-ind-pic {
+  border-right: 2px solid black;
+  width: 40%;
+  max-width: 40%;
+
+}
+
+.achievement-ind-wrapper {
+  border: 2px solid black;
+  font-family: fortniteFont;
+  display: flex;
+  break-inside: avoid-column;
+}
+
+.achievement-ind-pic-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+}
+
+.achievement-ind-description {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  font-family: fortniteFont;
+  font-size: 25px;
+}
 /* --------------------- Fonts --------------------- */
 
 @font-face {

@@ -95,14 +95,14 @@ class Challenge extends Component {
       )
     }
 
-    let Weekly = () => (
+    const Weekly = () => (
       <div className="weekly-challenges-wrapper">
         <h4 className="weekly-title">Weekly Challenges</h4>
         {weeklyChallenges}
       </div>
     );
 
-    let Season = () => (
+    const Season = () => (
       <div className="weekly-challenges-wrapper"> 
         <h4 className="weekly-title">Season Challenges</h4>
         <div className="challenge-row-items">
@@ -120,10 +120,7 @@ class Challenge extends Component {
         <div className="challenges-box-wrapper">
           <div className="challenges-header">
             <h2 className="challenges-title"> Fortnite Current Challenges</h2>
-          </div>
-
-
-          
+          </div>        
           <div className="item-buttons">
             <button className="item-button" onClick={() => this.changeMode(true)}> Weekly </button>
             <button className="item-button" onClick={() => this.changeMode(false)}> Season </button>
