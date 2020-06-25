@@ -23,13 +23,19 @@ app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname + '/static/index.html'));
 })
 
-const fortniteAPIIO = require("fortnite-api-io")
+const FortniteAPI = require("fortnite-api-io")
 const key = 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
-const fortniteAPI = new fortniteAPIIO(key);
+const fortniteAPI = new FortniteAPI(key);
 
 
-app.get('/stats', function(req,res) {
-      
+app.get('/playerid', async function(req, res) {
+  const id = await fortniteAPI.searchAccountId(req.query.name);
+  res.json(id); 
+});
+
+app.get('/playerstats', async function(req, res) {
+  const stats = await fortniteAPI.getGlobalPlayerStats(req.query.id);
+  res.json(stats); 
 });
 
 app.get('/store', async function(req, res) {
@@ -67,6 +73,20 @@ app.get('/battlepass', async function(req, res) {
   res.json(pass);
 });
 
+app.get('/prevseasons', async function(req, res) {
+  const seasons = await fortniteAPI.listPreviousSeasons();
+  res.json(seasons);
+});
+
+app.get('/prevmaps', async function(req, res) {
+  const maps = await fortniteAPI.listPreviousMaps();
+  res.json(maps);
+});
+
+app.get('/points', async function(req, res) {
+  const points = await fortniteAPI.listCurrentPOI();
+  res.json(points);
+});
 
 
 app.listen(port, (req, res) => {
