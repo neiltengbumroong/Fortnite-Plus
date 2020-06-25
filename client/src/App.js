@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router, Link } from "@reach/router";
 import HomePage from './HomePage';
+import Player from './Player';
 import ItemShop from './ItemShop';
 import Item from './Item';
 import Challenge from './Challenge';
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Router>
         <HomePage path="/" />
+        <Player path="/:name" />
         <ItemShop path="ItemShop" />
         <Item path="ItemShop/:id" />
         <Challenge path="Challenge" />

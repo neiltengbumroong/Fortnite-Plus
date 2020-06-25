@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { Router, Link } from "@reach/router";
+import { Link } from "@reach/router";
 import Navbar from './Navbar';
 //import Background from './Background.js';
 import { normalizeRarity, chooseBackground } from './utils/index.js';
@@ -26,7 +26,7 @@ class HomePage extends Component {
     }
 
     // this.getStats = this.getStats.bind(this);
-    // this.handleContentChange = this.handleContentChange.bind(this);
+    this.handleContentChange = this.handleContentChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
     // this.getItems = this.getItems.bind(this);
   }
@@ -115,30 +115,28 @@ class HomePage extends Component {
             <h2>Find Your Fortnite Stats!</h2>
           </div>
           <form className="search-form">
-            <input
+            <input 
+              className="search-input"
               type="text"
               placeholder="Enter an Epic ID"
-              className="u-full-width"
               onChange={this.handleContentChange}
             />
-            {/* <FontAwesomeIcon 
-              icon={faSearch} 
-              size="lg" 
-              className="search-icon"
-              onClick={this.handleSubmit}
-            /> */}
+            <Link to={`${this.state.content}`}>
+              <div className="search-icon-wrapper">
+                <FontAwesomeIcon
+                  className="search-icon"
+                  icon={faSearch} 
+                  size="lg" 
+                />
+              </div>
+            </Link>
+            
           </form>
       </div>
       <div className="box-wrapper">
-        <div className="itemshop-box">
-          <h3>Item Shop</h3>
-          <div className="row-items">
-          </div>
-          
+        <div className="itemshop-box">       
         </div>
         <div className="challenge-box">
-          <h3>Challenges</h3>
-          {challenges}
         </div>
       </div>       
       </>   

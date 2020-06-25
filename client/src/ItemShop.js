@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 // import Background from './Background.js';
-import { Router, Link } from "@reach/router";
+import { Link } from "@reach/router";
 import Item from './Item';
 import Countdown from './Countdown';
 import { normalizeRarity, chooseBackground } from './utils/index.js';

@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.overall-stat-wrapper {
+  margin-top: 4%;
+  margin-left: 8%;
+  margin-right: 8%;
+}

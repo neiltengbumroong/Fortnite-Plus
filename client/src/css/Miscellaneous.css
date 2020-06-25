@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+.misc-overall-wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+.misc-buttons {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  font-family: fortniteFont;
+  font-size: 20px; 
+}
+
+.misc-display {
+  margin-top: 3%;
+}
+
+/* --------------------- Stat Box --------------------- */
+
+.header-stat-box {
+  font-family: fortniteFont;
+  font-size: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 3px solid black;
+}
+
+.header-stat-title {
+  text-align: center;
+}
+
+.header-stat {
+  text-align: left;
+  margin-left: 3%;
+  columns: 2 auto;
+}
+
+/* --------------------- Seasons --------------------- */
+
+.season-wrapper {
+  font-family: fortniteFont;
+  font-size: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 4%;
+  text-align: center;
+}
+
+.season-row-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+/* --------------------- Maps --------------------- */
+
+.map-wrapper {
+  font-family: fortniteFont;
+  font-size: 25px;
+  text-align: center;
+  margin-right: 2%;
+}
+
+
+.map-row-items {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  overflow: scroll;
+}
+
+/* --------------------- Points --------------------- */
+
+.point-wrapper {
+  font-family: fortniteFont;
+  font-size: 25px;
+  text-align: center;
+  /* margin-right: 2%;
+  margin-left: 2%; */
+  margin: 0 auto;
+  margin-top: 3%;
+}
+
+
+.point-row-items {
+  display: flex;
+  justify-content: left;
+  border: 2px solid black;
+  flex-wrap: wrap; 
+}
+
+.point-coord {
+  display: flex;
+  justify-content: center;
+}
+
+.point-ind {
+  padding: 0 10px;
+}

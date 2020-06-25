@@ -3,7 +3,6 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import { normalizeRarity, capFirst } from './utils/index.js';
 // import Background from './Background.js';
-// import { Router, Link } from "@reach/router";
 
 import './css/skeleton.css';
 import './css/normalize.css';

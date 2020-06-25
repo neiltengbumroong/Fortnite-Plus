@@ -58,10 +58,10 @@ class BattlePass extends Component {
 
   nameFiller(name) {
     if (name === "") {
-      return true;
+      return "Banner/Upgrade";
     }
 
-    return false;
+    return name;
   }
 
   changeMode(mode) {
@@ -80,9 +80,15 @@ class BattlePass extends Component {
       free = this.state.freeData.map((element, i) => 
         <div key={i} className="reward-wrapper">    
           <div className="reward-name">
-            {element.name == "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{element.name}</h5>}
+            {element.name === "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{this.nameFiller(element.name)}</h5>}
           </div>
-          <img src={this.selectImage(element.type) ? element.images.background : element.images.icon} height="200" width="200" alt="reward preview"/>      
+          <img 
+            src={this.selectImage(element.type) ? element.images.background : element.images.icon}
+            onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
+            height="200" 
+            width="200" 
+            alt="reward preview"
+          />      
           <div className="reward-description">
             <p className="description-paragraph">{normalizeRarity(element.rarity)} | {capFirst(element.type)}</p>
             <p className="description-paragraph">Tier {element.tier}</p>
@@ -93,9 +99,15 @@ class BattlePass extends Component {
       paid = this.state.paidData.map((element, i) => 
         <div key={i} className="reward-wrapper">    
           <div className="reward-name">
-            {element.name == "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{element.name}</h5>}
+            {element.name === "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{this.nameFiller(element.name)}</h5>}
           </div>
-          <img src={this.selectImage(element.type) ? element.images.background : element.images.icon} height="200" width="200" alt="reward preview"/>      
+          <img 
+            src={this.selectImage(element.type) ? element.images.background : element.images.icon}
+            onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
+            height="200" 
+            width="200" 
+            alt="reward preview"
+          />      
           <div className="reward-description">
             <p className="description-paragraph">{normalizeRarity(element.rarity)} | {capFirst(element.type)}</p>
             <p className="description-paragraph">Tier {element.tier}</p>
