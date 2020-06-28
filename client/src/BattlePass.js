@@ -6,7 +6,7 @@ import './css/skeleton.css';
 import './css/normalize.css';
 import './css/BattlePass.css';
 
-import { normalizeRarity, capFirst } from './utils/index.js';
+import { normalizeRarity, capFirst, selectImage, pictureFiller, nameFiller } from './utils/index.js';
 
 const BATTLE_URL = 'http://localhost:5000/battlepass';
 
@@ -42,27 +42,7 @@ class BattlePass extends Component {
       })
   }
 
-  selectImage(type) {
-    if (type === "misc" || type === "banner") {
-      return false;
-    }
-    return true;
-  }
-
-  pictureFiller(name) {
-    if (name.includes("upgrade")) {
-      return true;
-    }
-    return false;
-  }
-
-  nameFiller(name) {
-    if (name === "") {
-      return "Banner/Upgrade";
-    }
-
-    return name;
-  }
+  
 
   changeMode(mode) {
     this.setState({ showPaid: mode })
@@ -80,10 +60,10 @@ class BattlePass extends Component {
       free = this.state.freeData.map((element, i) => 
         <div key={i} className="reward-wrapper">    
           <div className="reward-name">
-            {element.name === "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{this.nameFiller(element.name)}</h5>}
+            {element.name === "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{nameFiller(element.name)}</h5>}
           </div>
           <img 
-            src={this.selectImage(element.type) ? element.images.background : element.images.icon}
+            src={selectImage(element.type) ? element.images.background : element.images.icon}
             onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
             height="200" 
             width="200" 
@@ -99,10 +79,10 @@ class BattlePass extends Component {
       paid = this.state.paidData.map((element, i) => 
         <div key={i} className="reward-wrapper">    
           <div className="reward-name">
-            {element.name === "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{this.nameFiller(element.name)}</h5>}
+            {element.name === "V-bucks" ? <h5>100 V-bucks</h5> : <h5>{nameFiller(element.name)}</h5>}
           </div>
           <img 
-            src={this.selectImage(element.type) ? element.images.background : element.images.icon}
+            src={selectImage(element.type) ? element.images.background : element.images.icon}
             onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
             height="200" 
             width="200" 

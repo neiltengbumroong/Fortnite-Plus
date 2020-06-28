@@ -138,7 +138,7 @@ class ItemShop extends Component {
       )
     }
 
-    let Current = () => (
+    const Current = () => (
       <>
         <div className="item-shop-row-1">
           <h5 className="row-title"> Featured Items</h5>
@@ -161,7 +161,7 @@ class ItemShop extends Component {
       </>
     );
 
-    let Upcoming = () => (
+    const Upcoming = () => (
       <>
         <h5 className="row-title"> Upcoming Items</h5>
         <div className="row-items">

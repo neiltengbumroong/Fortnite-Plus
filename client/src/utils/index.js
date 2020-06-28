@@ -56,4 +56,26 @@ function chooseNameSize(string) {
   }
 }
 
-export {normalizeRarity, chooseBackground, capFirst, chooseNameSize};
+function selectImage(type) {
+  if (type === "misc" || type === "banner") {
+    return false;
+  }
+  return true;
+}
+
+function pictureFiller(name) {
+  if (name.includes("upgrade")) {
+    return true;
+  }
+  return false;
+}
+
+function nameFiller(name) {
+  if (name === "") {
+    return "Banner/Upgrade";
+  }
+
+  return name;
+}
+
+export {normalizeRarity, chooseBackground, capFirst, chooseNameSize, selectImage, pictureFiller, nameFiller};

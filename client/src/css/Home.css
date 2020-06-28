@@ -3,8 +3,8 @@
 }
 
 .home-container {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* --------------------- Fonts --------------------- */
@@ -38,6 +38,11 @@
 
 /* --------------------- Search Bar --------------------- */
 
+.search-wrapper {
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
 .search-title {
   font-family: fortniteFont;
   text-align: center;
@@ -66,14 +71,6 @@ form {
   border-bottom: 1px solid black;
 }
 
-/* .search-icon {
-  position: absolute;
-  margin-left: 1%;
-  margin-top: 2%;
-  margin-left: 95%;
-  float: right;
-} */
-
 
 .search-icon-wrapper {
   border: 1px solid black;
@@ -87,52 +84,85 @@ form {
   color: grey;
 }
 
-/* --------------------- Main Boxes --------------------- */
-
-/* .box-wrapper {
-  width: 100%;
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  
-}
-
-.itemshop-box {
-  border: 1px solid grey;
-  height: 500px;
-  width: 400px;
-  text-align: center;
-}
-
-.challenge-box {
-  border: 1px solid grey;
-  height: 500px;
-  width: 400px;
-  text-align: center;
-  margin-left: 10%;;
-} */
 
 /* --------------------- Item Box --------------------- */
-
-.item-wrapper {
-  margin-top: 0;
-  margin-bottom: 2%;
-  margin-left: 2%;
-  border: 2px solid black;
-}
-
-.item-description {
-  text-align: center;
-  font-family: fortniteFont;
-  font-size: 10px;
-  border-top: 2px solid black;
-}
 
 .row-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
 }
+
+/* --------------------- Preview --------------------- */
+
+.preview-row-wrapper {
+  display: flex;
+  margin-top: 5%;
+}
+
+.reward-wrapper-preview {
+  border: 3px solid black;
+  min-width: 50px;
+  min-height: 50px;
+  margin-left: 1%;
+  margin-right: auto; 
+  margin-bottom: 2%;
+  border-radius: 10px;
+}
+
+.reward-name-tag {
+  font-size: 15px;
+  margin: 0;
+}
+.reward-name-preview {
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-size: 15px;
+  font-family: fortniteFont;
+  margin-bottom: 0;
+}
+
+.reward-description-preview {
+  font-size: 10px;
+  font-family: fortniteFont;
+  text-align: center;
+  border-top: 2px solid black;
+  margin-top: -4%;
+}
+
+.description-paragraph-preview {
+  padding: 0;
+  margin: 0;
+}
+
+.preview-element {
+  border: 2px solid black;
+  margin: 0 2%;
+  padding-bottom: 1%;
+}
+
+.preview-button {
+  font-family: fortniteFont;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
+
+.preview-button-wrapper {
+  text-align: center;
+}
+
+/* --------------------- Credentials --------------------- */
+
+.home-credentials {
+  margin-top: 5%;
+  font-family: fortniteFont;
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+}
+
 
 /* --------------------- Backgrounds for Items --------------------- */
 

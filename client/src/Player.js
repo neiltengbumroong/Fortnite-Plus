@@ -232,15 +232,15 @@ class Player extends Component {
             (soloStats.matchesplayed + duoStats.matchesplayed + squadStats.matchesplayed) * 100)/100}</p>
           </div>
           <div className="lifetime-stat-box">
-            <p className="lifetime-header"># of Placements (Tier 3)</p>
+            <p className="lifetime-header">Placed Top 25/10/6</p>
             <p>{soloStats.placetop25 + duoStats.placetop12 + squadStats.placetop6}</p>
           </div>
           <div className="lifetime-stat-box">
-            <p className="lifetime-header"> # of Placements (Tier 2)</p>
+            <p className="lifetime-header">Placed Top 10/5/3</p>
             <p>{soloStats.placetop10 + duoStats.placetop5 + squadStats.placetop3}</p>
           </div> 
           <div className="lifetime-stat-box">
-            <p className="lifetime-header"># of Placements (Total)</p>
+            <p className="lifetime-header">Total Placements</p>
             <p>{soloStats.placetop25 + duoStats.placetop12 + squadStats.placetop6 + 
                 soloStats.placetop10 + duoStats.placetop5 + squadStats.placetop3 + 
                 soloStats.placetop1 + duoStats.placetop1 + squadStats.placetop1}</p>
@@ -391,7 +391,8 @@ class Player extends Component {
       <div className="error-message-wrapper">
         <p className="error-main">Sorry! Looks like something went wrong when retrieving your stats. This could be for a number of reasons, including:</p>
           <ul>
-            <li>You did not enter a valid or existing Epic ID</li>
+            <li>You did not enter a valid or existing Epic Username</li>
+            <li>You have not linked your account to an Epic ID (console issue only)</li>
             <li>Your username has a special character in it (fix coming soon!)</li>
             <li>Fortnite's servers (or ours) had an error displaying your stats</li>
           </ul>         
@@ -405,7 +406,7 @@ class Player extends Component {
       </div>
     )
 
-    
+    console.log("here");
 
     
     
@@ -470,7 +471,7 @@ class Player extends Component {
                     label={({ dataEntry }) => dataEntry.title + " - " + `${Math.round(dataEntry.percentage*100)/100}%`}
                     labelStyle={(index) => ({
                       fontSize: '5px',
-                      fontFamily: 'fortniteFont'
+                      fontFamily: 'fortniteFont',
                     })}
                     />
                   </>

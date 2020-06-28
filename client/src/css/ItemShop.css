@@ -16,7 +16,6 @@
 }
 
 .row-title-wrapper {
-  border: 1px solid grey; 
 }
 
 /* --------------------- Item Shop Header --------------------- */
@@ -76,17 +75,6 @@
   justify-content: left;
 }
 
-.item-shop-row-1 {
-  border: 1px solid grey;
-}
-
-.item-shop-row-2 {
-  border: 1px solid grey;
-}
-
-.item-shop-row-3 {
-  border: 1px solid grey;
-}
 
 /* --------------------- Items: Individual --------------------- */
 
@@ -94,15 +82,12 @@
   margin-top: 0;
   margin-bottom: 2%;
   margin-left: 2%;
-  border: 3px solid black;
-  border-radius: 10px;
 }
 
 .item-description {
   text-align: center;
   font-family: fortniteFont;
   font-size: 20px;
-  border-top: 3px solid black;
 }
 
 /* --------------------- Backgrounds for Items --------------------- */
