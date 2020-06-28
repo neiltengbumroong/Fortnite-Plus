@@ -3,9 +3,7 @@ import axios from 'axios';
 import Navbar from './Navbar';
 // import Background from './Background.js';
 import { Link } from "@reach/router";
-import Item from './Item';
 import Countdown from './Countdown';
-import { normalizeRarity, chooseBackground } from './utils/index.js';
 
 // import './css/Home.css';
 import './css/ItemShop.css';
@@ -179,11 +177,6 @@ class ItemShop extends Component {
       </div>
       <div className="item-shop-wrapper">
         <h2 className="item-shop-header"> Fortnite Item Shop</h2>
-        {/* <div className="item-shop-stats">
-          <p className="stat-paragraph">Items In Shop: {this.state.isLoading? 0 : 
-          this.state.items.daily.length + this.state.items.featured.length + specialArr.length}</p>
-          
-        </div> */}
 
         <div className="item-buttons">
           <button className="item-button" onClick={() => this.changeMode(true)}> Current </button>

@@ -136,7 +136,7 @@
 
 .uncommon {
   background: rgb(6,213,0);
-  background: radial-gradient(circle, rgba(6,213,0,1) 9%, rgba(3,122,0,1) 100%);
+  background: radial-gradient(circle, rgba(6, 213, 0, 1) 9%, rgba(3, 122, 0, 1) 100%);
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 1px;

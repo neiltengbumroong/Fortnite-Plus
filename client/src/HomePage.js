@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import { Link } from "@reach/router";
+import { Link, navigate } from "@reach/router";
 import Navbar from './Navbar';
 //import Background from './Background.js';
-import { normalizeRarity, chooseBackground } from './utils/index.js';
 
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './css/Home.css';
 import './css/skeleton.css';
 import './css/normalize.css';
-// import './css/ItemShop.css';
 
 class HomePage extends Component {
   constructor(props) {
@@ -80,8 +77,8 @@ class HomePage extends Component {
 
   render() {
 
-    let items = null;
-    let challenges = null;
+    // let items = null;
+    // let challenges = null;
 
     // if (!this.state.isFetchingItems) {
     //   items = this.state.items.map((eachItem, i) =>
@@ -114,7 +111,13 @@ class HomePage extends Component {
           <div className="search-title">
             <h2>Find Your Fortnite Stats!</h2>
           </div>
-          <form className="search-form">
+          <form 
+            className="search-form"
+            onSubmit={event => {
+              event.preventDefault();
+              navigate(`${this.state.content}`)
+            }}
+          >
             <input 
               className="search-input"
               type="text"
@@ -129,8 +132,7 @@ class HomePage extends Component {
                   size="lg" 
                 />
               </div>
-            </Link>
-            
+            </Link>        
           </form>
       </div>
       <div className="box-wrapper">

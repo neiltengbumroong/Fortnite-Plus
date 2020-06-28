@@ -7,3 +7,216 @@
   margin-left: 8%;
   margin-right: 8%;
 }
+
+.player-lifetime {
+  margin-top: 3%;
+  display: flex;
+}
+
+
+/* --------------------- Title --------------------- */
+
+.title-wrapper {
+  display: flex;
+  height: 50%;
+}
+
+.main-title {
+  font-family: fortniteFont;
+}
+
+.main-name-large {
+  font-size: 65px;
+}
+
+.main-name-medium {
+  font-size: 55px;
+}
+
+.main-name-small {
+  font-size: 45px;
+}
+
+.main-account-lvl {
+  font-size: 25px;
+  text-align: center;
+}
+
+.main-account-wins {
+  font-size: 35px;
+}
+
+/* --------------------- Overview --------------------- */
+.overview-title {
+  font-family: fortniteFont;
+  font-size: 30px;
+  text-align: center;
+  background-color: grey;
+}
+
+.main-overview {
+  border: 1px dotted blue;
+  margin-left: 3%;
+  width: 80%;
+  padding: 0;
+}
+
+.overview-box-wrapper {
+  display: flex;
+  margin-top: -2%;
+}
+
+.title-box {
+  margin: 0 auto;
+  font-family: fortniteFont;
+  
+}
+
+.title-header {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.title-stat {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+/* --------------------- Lifetime --------------------- */
+.lifetime-box-wrapper {
+  border: 1px dotted black;
+  width: 60%;
+}
+
+.lifetime-stat-wrapper {
+  columns: 3 auto;
+}
+
+.lifetime-title {
+  font-family: fortniteFont;
+  font-size: 30px;
+  width: 100%;
+  padding: 0;
+  padding-left: 1%;
+  background-color: grey;
+}
+
+.lifetime-stat-box {
+  font-family: fortniteFont;
+  font-size: 30px;
+  margin-left: 3%;
+  break-inside: avoid-column;
+}
+
+.lifetime-header {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* --------------------- Charts --------------------- */
+
+.pie-chart-buttons {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.chart-button:focus, chart-button:hover {
+  color: white;
+  background-color: grey;
+}
+
+.pie-chart {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+}
+
+.chart-title {
+  font-family: fortniteFont;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.pie-chart-wrapper {
+  margin: 0 auto;
+  width: 23;
+  height: 20%;
+}
+
+/* --------------------- Individual Stat Boxes --------------------- */
+
+.mode-wrapper {
+  margin: 2%;
+  width: 40%;
+  border: 1px dotted black;
+}
+
+.mode-title {
+  font-family: fortniteFont;
+  font-size: 30px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-left: 2%;
+  background-color: grey;
+}
+
+.stat-box-wrapper {
+  
+  columns: 2 auto;
+  text-align: left;
+}
+
+.ind-stat-box {
+  font-family: fortniteFont;
+  font-size: 25px;
+  margin-left: 5%;
+}
+
+.ind-stat-header {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------- Layout --------------------- */
+
+.player-modes {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+/* --------------------- Errors --------------------- */
+.error-message-wrapper {
+  margin: 5% 20% 0%;
+  font-family: fortniteFont;
+  font-size: 20px;
+}
+
+.error-main {
+  font-size: 30px;
+}
+
+.return-button-wrapper {
+  text-align: center;
+}
+
+.no-match-message {
+  text-align: center;
+  font-family: fortniteFont;
+  font-size: 25px;
+  margin-top: 15%;
+}
+
+/* --------------------- Loading Screen --------------------- */
+.loading-screen {
+  font-family: fortniteFont;
+  text-align: center;
+  font-size: 100px;
+}

@@ -16,10 +16,13 @@
     "date-diff": "^0.2.2",
     "fortnite-api-io": "^1.4.1",
     "moment": "^2.27.0",
+    "pretty-ms": "^7.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
+    "react-chartjs-2": "^2.9.0",
     "react-compound-timer": "^1.2.0",
     "react-dom": "^16.13.1",
+    "react-minimal-pie-chart": "^8.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },

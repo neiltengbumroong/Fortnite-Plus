@@ -44,4 +44,16 @@ function capFirst(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export {normalizeRarity, chooseBackground, capFirst};
+function chooseNameSize(string) {
+  if (string.length < 10) {
+    return "large"
+  }
+  else if (string.length < 12) {
+    return "medium";
+  }
+  else {
+    return "small";
+  }
+}
+
+export {normalizeRarity, chooseBackground, capFirst, chooseNameSize};
