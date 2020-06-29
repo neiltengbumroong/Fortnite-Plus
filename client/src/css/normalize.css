@@ -254,7 +254,6 @@
   optgroup,
   select,
   textarea {
-    color: inherit; /* 1 */
     font: inherit; /* 2 */
     margin: 0; /* 3 */
   }
@@ -376,11 +375,6 @@
    * Define consistent border, margin, and padding.
    */
   
-  fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-  }
   
   /**
    * 1. Correct `color` not being inherited in IE 8/9/10/11.

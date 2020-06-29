@@ -114,10 +114,9 @@ class HomePage extends Component {
 
     const ItemPreview = () => (
       <div className="preview-element">
-        <h5 className="row-title">Item Shop</h5>
+        <h5 className="home-row-title">Item Shop</h5>
         <div className="row-items">
           {dailyItems}
-          {featuredItems}
         </div>
         <Link to="/ItemShop">
           <div className="preview-button-wrapper">
@@ -129,7 +128,7 @@ class HomePage extends Component {
 
     const BattlePreview = () => (
       <div className="preview-element">
-        <h5 className="row-title">Battle Pass</h5>
+        <h5 className="home-row-title">Battle Pass</h5>
         <div className="row-items">
           {battlePass}
         </div>
@@ -142,14 +141,14 @@ class HomePage extends Component {
     )
 
     return (
-      <> 
+      <div className="background-wrapper"> 
         <div className="nav-container">
           <Navbar /> 
         </div>
         <div className="home-container">
           <div className="search-wrapper">
             <div className="search-title">
-              <h2>Find Your Fortnite Stats!</h2>
+              <p className="search-title-header">Find Your Fortnite Stats!</p>
             </div>
             <form 
               className="search-form"
@@ -189,7 +188,7 @@ class HomePage extends Component {
           </div>
       </div>
             
-      </>   
+      </div>   
     )
   }
 }
