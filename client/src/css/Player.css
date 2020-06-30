@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .overall-stat-wrapper {
   margin-top: 4%;
   margin-left: 8%;
@@ -11,6 +16,14 @@
 .player-lifetime {
   margin-top: 3%;
   display: flex;
+}
+
+.player-background-wrapper {
+  background-image: url("/fortniteblue.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 
@@ -23,6 +36,7 @@
 
 .main-title {
   font-family: fortniteFont;
+  color: white;
 }
 
 .main-name-large {
@@ -40,10 +54,7 @@
 .main-account-lvl {
   font-size: 25px;
   text-align: center;
-}
-
-.main-account-wins {
-  font-size: 35px;
+  color: white;
 }
 
 /* --------------------- Overview --------------------- */
@@ -51,19 +62,23 @@
   font-family: fortniteFont;
   font-size: 30px;
   text-align: center;
-  background-color: grey;
+  margin-bottom: -0.1%;
+  background: rgb(128, 211, 252);
+  background: linear-gradient(90deg, rgba(0, 201, 255, 1) 40%, rgb(128, 211, 252) 90%);
 }
 
 .main-overview {
-  border: 1px dotted blue;
   margin-left: 3%;
   width: 80%;
   padding: 0;
+  border: 4px solid rgb(21, 163, 235);
 }
 
 .overview-box-wrapper {
   display: flex;
-  margin-top: -2%;
+  margin: 0;
+  background: rgb(128, 211, 252);
+  
 }
 
 .title-box {
@@ -82,16 +97,22 @@
   font-size: 50px;
   padding: 0;
   margin: 0;
+  color: black;
 }
 
 /* --------------------- Lifetime --------------------- */
 .lifetime-box-wrapper {
-  border: 1px dotted black;
   width: 60%;
+  background: rgba(255,237,159,1);
+  border: 4px solid rgb(238, 193, 15);
 }
 
 .lifetime-stat-wrapper {
   columns: 3 auto;
+}
+
+.lifetime-stat {
+  color: black;
 }
 
 .lifetime-title {
@@ -100,7 +121,8 @@
   width: 100%;
   padding: 0;
   padding-left: 1%;
-  background-color: grey;
+  background: rgb(255,206,0);
+  background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%);
 }
 
 .lifetime-stat-box {
@@ -123,17 +145,48 @@
   display: flex;
   padding: 0;
   margin: 0;
+  justify-content: center;
+  margin-bottom: 5%;
 }
 
-.chart-button:focus, chart-button:hover {
+.chart-button {
+  border: none;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  font-family: fortniteFont;
+  font-size: 25px;
+  transition: 0.4s ease; 
+}
+
+.chart-button:hover {
   color: white;
-  background-color: grey;
+  
+}
+
+.chart-button:active {
+  box-shadow: inset 0 -2px 0 0 white;
+  border: none;
+  outline: none;
+  color: white;
+} 
+
+.chart-button-active {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: black;
+  font-family: fortniteFont;
+  font-size: 25px;
+  background: transparent;
+  box-shadow: inset 0 -2px 0 0 white;
+  outline: none;
 }
 
 .pie-chart {
-  border: 1px solid black;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .chart-title {
@@ -153,7 +206,21 @@
 .mode-wrapper {
   margin: 2%;
   width: 40%;
-  border: 1px dotted black;
+}
+
+.mode-wrapper-solo {
+  background: rgba(169,255,186,1);
+  border: 4px solid rgb(16, 214, 56);
+}
+
+.mode-wrapper-duo {
+  background: rgba(198,152,212,1);
+  border: 4px solid rgb(162, 76, 185);
+}
+
+.mode-wrapper-squad {
+  background: rgba(255,215,141,1);
+  border: 4px solid rgb(231, 154, 12);
 }
 
 .mode-title {
@@ -163,7 +230,21 @@
   padding: 0;
   margin: 0;
   padding-left: 2%;
-  background-color: grey;
+}
+
+.mode-title-solo {
+  background: rgb(92,252,123);
+  background: linear-gradient(90deg, rgba(92,252,123,1) 10%, rgba(169,255,186,1) 85%);
+}
+
+.mode-title-duo {
+  background: rgb(194,114,217);
+  background: linear-gradient(90deg, rgba(194,114,217,1) 10%, rgba(198,152,212,1) 85%);
+}
+
+.mode-title-squad {
+  background: rgb(255,166,0);
+  background: linear-gradient(90deg, rgba(255,166,0,1) 10%, rgba(255,215,141,1) 85%);
 }
 
 .stat-box-wrapper {
@@ -173,8 +254,12 @@
 
 .ind-stat-box {
   font-family: fortniteFont;
-  font-size: 25px;
   margin-left: 5%;
+}
+
+.ind-stat {
+  color: black;
+  font-size: 25px;
 }
 
 .ind-stat-header {
@@ -198,6 +283,16 @@
   font-size: 20px;
 }
 
+.error-background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-image: url("/fortniteblue.jpg");
+}
+
 .error-main {
   font-size: 30px;
 }
@@ -217,5 +312,16 @@
 .loading-screen {
   font-family: fortniteFont;
   text-align: center;
-  font-size: 100px;
+  font-size: 40px;
+  margin-top: 20%;
+}
+
+.loading-screen-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-image: url("/fortniteblue.jpg");
 }

@@ -34,8 +34,8 @@ const DEFAULT_STAT = {
 };
 
 const DEFAULT_CHART = [
-  { title: 'Solo', value: 0, color: 'rgba(0, 201, 255, 1)' },
-  { title: 'Duo', value: 0, color: 'rgba(6, 213, 0, 1)' },
+  { title: 'Solo', value: 0, color: '#5cfc7b' },
+  { title: 'Duo', value: 0, color: '#c272d9' },
   { title: 'Squad', value: 0, color: 'rgba(252, 164, 0, 1)' }
 ];
 
@@ -141,20 +141,20 @@ class Player extends Component {
       }
   
       if (this.state.solo) {
-        winData.push({ title: 'Solo', value: soloStats.placetop1, color: 'rgba(0, 201, 255, 1)' });
-        killData.push({ title: 'Solo', value: soloStats.kills, color: 'rgba(0, 201, 255, 1)' });
-        matchData.push({ title: 'Solo', value: soloStats.matchesplayed, color: 'rgba(0, 201, 255, 1)' });
+        winData.push({ title: 'Solo', value: soloStats.placetop1, color: '#5cfc7b' });
+        killData.push({ title: 'Solo', value: soloStats.kills, color: '#5cfc7b' });
+        matchData.push({ title: 'Solo', value: soloStats.matchesplayed, color: '#5cfc7b' });
       }
       if (this.state.duo) {
-        winData.push({ title: 'Duo', value: duoStats.placetop1, color: 'rgba(6, 213, 0, 1)' });
-        killData.push({ title: 'Duo', value: duoStats.kills, color: 'rgba(6, 213, 0, 1)' });
-        matchData.push({ title: 'Duo', value: duoStats.matchesplayed, color: 'rgba(6, 213, 0, 1)' });
+        winData.push({ title: 'Duo', value: duoStats.placetop1, color: '#c272d9' });
+        killData.push({ title: 'Duo', value: duoStats.kills, color: '#c272d9' });
+        matchData.push({ title: 'Duo', value: duoStats.matchesplayed, color: '#c272d9' });
       }
 
       if (this.state.squad) {
-        winData.push({ title: 'Squad', value: squadStats.placetop1, color: 'rgba(252, 164, 0, 1)' });
-        killData.push({ title: 'Squad', value: squadStats.kills, color: 'rgba(252, 164, 0, 1)' });
-        matchData.push({ title: 'Squad', value: squadStats.matchesplayed, color: 'rgba(252, 164, 0, 1)' });
+        winData.push({ title: 'Squad', value: squadStats.placetop1, color: 'rgba(252,164,0,1)' });
+        killData.push({ title: 'Squad', value: squadStats.kills, color: 'rgba(252,164,0,1)' });
+        matchData.push({ title: 'Squad', value: squadStats.matchesplayed, color: 'rgba(252,164,0,1)' });
       }
     }
 
@@ -204,44 +204,44 @@ class Player extends Component {
         <div className="lifetime-stat-wrapper">
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Matches Played</p>
-            <p>{soloStats.matchesplayed + duoStats.matchesplayed + squadStats.matchesplayed}</p>
+            <p className="lifetime-stat">{soloStats.matchesplayed + duoStats.matchesplayed + squadStats.matchesplayed}</p>
           </div>
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Total Score</p>
-            <p>{soloStats.score + duoStats.score + squadStats.score}</p>
+            <p className="lifetime-stat">{soloStats.score + duoStats.score + squadStats.score}</p>
           </div>
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Players Outlived</p>
-            <p>{soloStats.playersoutlived + duoStats.playersoutlived + squadStats.playersoutlived}</p>
+            <p className="lifetime-stat">{soloStats.playersoutlived + duoStats.playersoutlived + squadStats.playersoutlived}</p>
           </div>
 
 
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Time Played</p>
-            <p>{prettyMS((soloStats.minutesplayed + duoStats.minutesplayed + squadStats.minutesplayed) * MS_CONVERT)}</p>
+            <p className="lifetime-stat">{prettyMS((soloStats.minutesplayed + duoStats.minutesplayed + squadStats.minutesplayed) * MS_CONVERT)}</p>
           </div>
 
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Average Score</p>
-            <p>{Math.round((soloStats.score + duoStats.score + squadStats.score)/
+            <p className="lifetime-stat">{Math.round((soloStats.score + duoStats.score + squadStats.score)/
             (soloStats.matchesplayed + duoStats.matchesplayed + squadStats.matchesplayed) * 100)/100}</p>
           </div>
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Average Kills</p>
-            <p>{Math.round((soloStats.kills + duoStats.kills + squadStats.kills)/
+            <p className="lifetime-stat">{Math.round((soloStats.kills + duoStats.kills + squadStats.kills)/
             (soloStats.matchesplayed + duoStats.matchesplayed + squadStats.matchesplayed) * 100)/100}</p>
           </div>
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Placed Top 25/10/6</p>
-            <p>{soloStats.placetop25 + duoStats.placetop12 + squadStats.placetop6}</p>
+            <p className="lifetime-stat">{soloStats.placetop25 + duoStats.placetop12 + squadStats.placetop6}</p>
           </div>
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Placed Top 10/5/3</p>
-            <p>{soloStats.placetop10 + duoStats.placetop5 + squadStats.placetop3}</p>
+            <p className="lifetime-stat">{soloStats.placetop10 + duoStats.placetop5 + squadStats.placetop3}</p>
           </div> 
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Total Placements</p>
-            <p>{soloStats.placetop25 + duoStats.placetop12 + squadStats.placetop6 + 
+            <p className="lifetime-stat">{soloStats.placetop25 + duoStats.placetop12 + squadStats.placetop6 + 
                 soloStats.placetop10 + duoStats.placetop5 + squadStats.placetop3 + 
                 soloStats.placetop1 + duoStats.placetop1 + squadStats.placetop1}</p>
           </div> 
@@ -250,8 +250,8 @@ class Player extends Component {
     );
 
     const PlayerSolo = () => (
-      <div className="mode-wrapper">
-        <h5 className="mode-title">Solo</h5>
+      <div className="mode-wrapper mode-wrapper-solo">
+        <h5 className="mode-title mode-title-solo">Solo</h5>
         {!this.state.solo ? 
         <div className="no-match-message">
           <p>No stats found for this mode! :(</p>
@@ -260,35 +260,35 @@ class Player extends Component {
         <div className="stat-box-wrapper">
           <div className="ind-stat-box">
             <p className="ind-stat-header">Wins</p>
-            <p>{soloStats.placetop1}</p>
+            <p className="ind-stat">{soloStats.placetop1}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Kills</p>
-            <p>{soloStats.kills}</p>
+            <p className="ind-stat">{soloStats.kills}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Matches Played</p>
-            <p>{soloStats.matchesplayed}</p>
+            <p className="ind-stat">{soloStats.matchesplayed}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Time Played</p>
-            <p>{prettyMS((soloStats.minutesplayed) * MS_CONVERT)}</p>
+            <p className="ind-stat">{prettyMS((soloStats.minutesplayed) * MS_CONVERT)}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">K/D Ratio</p>
-            <p>{soloStats.kd}</p>
+            <p className="ind-stat">{soloStats.kd}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Win Rate</p>
-            <p>{Math.round((soloStats.winrate) * 10000 )/100}%</p>
+            <p className="ind-stat">{Math.round((soloStats.winrate) * 10000 )/100}%</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Top 10</p>
-            <p>{soloStats.placetop10}</p>
+            <p className="ind-stat">{soloStats.placetop10}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Top 25</p>
-            <p>{soloStats.placetop25}</p>
+            <p className="ind-stat">{soloStats.placetop25}</p>
           </div>
         </div>
       }
@@ -296,8 +296,8 @@ class Player extends Component {
     );
 
     const PlayerDuo = () => (
-      <div className="mode-wrapper">
-        <h5 className="mode-title">Duo</h5>
+      <div className="mode-wrapper mode-wrapper-duo">
+        <h5 className="mode-title mode-title-duo">Duo</h5>
         {!this.state.duo ? 
         <div className="no-match-message">
           <p>No stats found for this mode! :(</p>
@@ -306,35 +306,35 @@ class Player extends Component {
         <div className="stat-box-wrapper">
           <div className="ind-stat-box">
             <p className="ind-stat-header">Wins</p>
-            <p>{duoStats.placetop1}</p>
+            <p className="ind-stat">{duoStats.placetop1}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Kills</p>
-            <p>{duoStats.kills}</p>
+            <p className="ind-stat">{duoStats.kills}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Matches Played</p>
-            <p>{duoStats.matchesplayed}</p>
+            <p className="ind-stat">{duoStats.matchesplayed}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Time Played</p>
-            <p>{prettyMS((duoStats.minutesplayed) * MS_CONVERT)}</p>
+            <p className="ind-stat">{prettyMS((duoStats.minutesplayed) * MS_CONVERT)}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">K/D Ratio</p>
-            <p>{duoStats.kd}</p>
+            <p className="ind-stat">{duoStats.kd}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Win Rate</p>
-            <p>{Math.round((duoStats.winrate) * 10000 )/100}%</p>
+            <p className="ind-stat">{Math.round((duoStats.winrate) * 10000 )/100}%</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Top 5</p>
-            <p>{duoStats.placetop5}</p>
+            <p className="ind-stat">{duoStats.placetop5}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Top 12</p>
-            <p>{duoStats.placetop12}</p>
+            <p className="ind-stat">{duoStats.placetop12}</p>
           </div>
         </div>
         }
@@ -342,8 +342,8 @@ class Player extends Component {
     );
 
     const PlayerSquad = () => (
-      <div className="mode-wrapper">
-        <h5 className="mode-title">Squad</h5>
+      <div className="mode-wrapper mode-wrapper-squad">
+        <h5 className="mode-title mode-title-squad">Squad</h5>
         {!this.state.squad ? 
         <div className="no-match-message">
           <p>No stats found for this mode! :(</p>
@@ -352,35 +352,35 @@ class Player extends Component {
         <div className="stat-box-wrapper">
           <div className="ind-stat-box">
             <p className="ind-stat-header">Wins</p>
-            <p>{squadStats.placetop1}</p>
+            <p className="ind-stat">{squadStats.placetop1}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Kills</p>
-            <p>{squadStats.kills}</p>
+            <p className="ind-stat">{squadStats.kills}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Matches Played</p>
-            <p>{squadStats.matchesplayed}</p>
+            <p className="ind-stat">{squadStats.matchesplayed}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Time Played</p>
-            <p>{prettyMS((squadStats.minutesplayed) * MS_CONVERT)}</p>
+            <p className="ind-stat">{prettyMS((squadStats.minutesplayed) * MS_CONVERT)}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">K/D Ratio</p>
-            <p>{squadStats.kd}</p>
+            <p className="ind-stat">{squadStats.kd}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Win Rate</p>
-            <p>{Math.round((squadStats.winrate) * 10000 )/100}%</p>
+            <p className="ind-stat">{Math.round((squadStats.winrate) * 10000 )/100}%</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Top 3</p>
-            <p>{squadStats.placetop3}</p>
+            <p className="ind-stat">{squadStats.placetop3}</p>
           </div>
           <div className="ind-stat-box">
             <p className="ind-stat-header">Top 6</p>
-            <p>{squadStats.placetop6}</p>
+            <p className="ind-stat">{squadStats.placetop6}</p>
           </div>
         </div>
         }
@@ -388,30 +388,30 @@ class Player extends Component {
     );
 
     const ErrorMessage = () => (
-      <div className="error-message-wrapper">
-        <p className="error-main">Sorry! Looks like something went wrong when retrieving your stats. This could be for a number of reasons, including:</p>
-          <ul>
-            <li>You did not enter a valid or existing Epic Username</li>
-            <li>You have not linked your account to an Epic ID (console issue only)</li>
-            <li>Your username has a special character in it (fix coming soon!)</li>
-            <li>Fortnite's servers (or ours) had an error displaying your stats</li>
-          </ul>         
-        <p>In any case, please try again or search for a different ID!</p>
-        <Link to="/">
-          <div className="return-button-wrapper">
-            <button className="return-button">Return to Homepage</button>
-          </div> 
-        </Link>
-        
+      <div className="error-background-wrapper">
+        <div className="nav-container">  
+          <Navbar />
+        </div>
+        <div className="error-message-wrapper">
+          <p className="error-main">Sorry! Looks like something went wrong when retrieving your stats. This could be for a number of reasons, including:</p>
+            <ul>
+              <li>You did not enter a valid or existing Epic Username</li>
+              <li>You have not linked your account to an Epic ID (console issue only)</li>
+              <li>Your username has a special character in it (fix coming soon!)</li>
+              <li>Fortnite's servers (or ours) had an error displaying your stats</li>
+            </ul>         
+          <p>In any case, please try again or search for a different ID!</p>
+          <Link to="/">
+            <div className="return-button-wrapper">
+              <button className="return-button">Return to Homepage</button>
+            </div> 
+          </Link>     
+        </div>
       </div>
     )
-
-    console.log("here");
-
-    
     
     return(
-      <>
+      <div className="player-background-wrapper">
         <div className="nav-container">  
             <Navbar />
         </div>
@@ -420,8 +420,13 @@ class Player extends Component {
             <ErrorMessage />
           </div>
           : this.state.isLoading ? 
-          <div className="loading-screen">
-            <h1>FUCK</h1>
+          <div className="loading-screen-wrapper">
+            <div className="nav-container">  
+              <Navbar />
+           </div>
+            <div className="loading-screen">
+              <h1>Retrieving Stats...</h1>
+            </div>          
           </div>
           :
           <div className="overall-stat-wrapper">
@@ -430,14 +435,13 @@ class Player extends Component {
               <PlayerLifetime />
               <div className="pie-chart-wrapper">
                   <div className="pie-chart-buttons">
-                    <button className="chart-button" onClick={() => this.changeMode('w')}> Wins </button>
-                    <button className="chart-button" onClick={() => this.changeMode('k')}> Kills </button>
-                    <button className="chart-button" onClick={() => this.changeMode('m')}> Matches </button>
+                    <button className={this.state.mode === 'w' ? "chart-button-active" : "chart-button"} onClick={() => this.changeMode('w')}> Wins </button>
+                    <button className={this.state.mode === 'k' ? "chart-button-active" : "chart-button"} onClick={() => this.changeMode('k')}> Kills </button>
+                    <button className={this.state.mode === 'm' ? "chart-button-active" : "chart-button"} onClick={() => this.changeMode('m')}> Matches </button>
                   </div>
                 <div className="pie-chart">              
                   {this.state.mode === 'w' ?
                     <>
-                      <h5 className="chart-title">Win Breakdown</h5>
                       <PieChart
                       data={winData}
                       animate={true}
@@ -451,7 +455,6 @@ class Player extends Component {
                   :
                   this.state.mode === 'k' ? 
                     <>
-                      <h5 className="chart-title">Kill Breakdown</h5>
                       <PieChart
                       data={killData}
                       animate={true}
@@ -464,7 +467,6 @@ class Player extends Component {
                     </>
                   :
                   <>
-                    <h5 className="chart-title">Match Breakdown</h5>
                     <PieChart
                     data={matchData}
                     animate={true}
@@ -487,7 +489,7 @@ class Player extends Component {
             </div>         
           </div>
       }
-      </>
+      </div>
     )
   }
 }

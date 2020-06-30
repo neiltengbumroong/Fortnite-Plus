@@ -4,6 +4,14 @@
 
 /* --------------------- Headers and Main Wrappers --------------------- */
 
+.challenge-background-wrapper {
+  background-image: url("/fortnitepink.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .challenges-box-wrapper {
   margin-top: 5%;
   margin-left: 10%;
@@ -51,10 +59,6 @@
   overflow: auto;
 }
 
-/* .progress, .xp-reward {
-  display: flex;
-} */
-
 .progress-other {
   padding-bottom: 0px;
   margin-bottom: 0px;
@@ -70,6 +74,15 @@
   text-align: center;
 }
 
+.pie-chart-buttons {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+
 /* --------------------- Challenges - General --------------------- */
 
 .challenge-row-items{
@@ -77,6 +90,47 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* --------------------- Buttons --------------------- */
+
+.challenge-buttons {
+  margin-bottom: 1%;
+}
+
+.challenge-button {
+  border: none;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  font-family: fortniteFont;
+  font-size: 25px;
+  transition: 0.4s ease; 
+}
+
+.challenge-button:hover {
+  color: white;
+  
+}
+
+.challenge-button:active {
+  box-shadow: inset 0 -2px 0 0 white;
+  border: none;
+  outline: none;
+  color: white;
+} 
+
+.challenge-button-active {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: black;
+  font-family: fortniteFont;
+  font-size: 25px;
+  background: transparent;
+  box-shadow: inset 0 -2px 0 0 white;
+  outline: none;
+}
+
 /* --------------------- Fonts --------------------- */
 
 @font-face {

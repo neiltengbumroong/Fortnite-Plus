@@ -50,7 +50,7 @@ class Item extends Component {
     
     
     return(
-      <>
+      <div className="item-background-wrapper">
         <div className="nav-container">  
             <Navbar />
         </div>
@@ -76,7 +76,7 @@ class Item extends Component {
           </div>         
         </>
         }            
-      </>
+      </div>
     )
   }
 }

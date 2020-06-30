@@ -11,6 +11,8 @@
   background-image: url("/fortniteblue.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* --------------------- Fonts --------------------- */
@@ -54,6 +56,9 @@
   text-align: center;
   margin-top: 3%;
   color: white;
+  @media screen and (max-width: 600px){
+    font-size: 10px;
+  }
 }
 
 .search-title-header {
@@ -71,7 +76,7 @@ input:focus {
   outline: none;
 }
 
-form {
+.search-form {
   display: flex;
   flex-direction: row;
   padding: 2px;
@@ -82,6 +87,7 @@ form {
   border-top: 2px solid black;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
+  cursor: text;
 }
 
 
@@ -159,7 +165,7 @@ form {
 }
 
 .preview-element {
-  margin: 0 2%;
+  margin: 0 1.5%;
   padding-bottom: 1%;
 }
 

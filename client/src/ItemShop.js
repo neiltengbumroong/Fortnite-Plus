@@ -170,25 +170,25 @@ class ItemShop extends Component {
       </>     
     );  
 
-    return(
-      <>
-      <div className="nav-container">  
-        <Navbar />
-      </div>
-      <div className="item-shop-wrapper">
-        <h2 className="item-shop-header"> Fortnite Item Shop</h2>
-
-        <div className="item-buttons">
-          <button className="item-button" onClick={() => this.changeMode(true)}> Current </button>
-          <button className="item-button" onClick={() => this.changeMode(false)}> Upcoming </button>
-          <p className="stat-paragraph">Shop Updating In: <Countdown /></p>
+    return (
+      <div className="item-shop-background-wrapper">
+        <div className="nav-container">  
+          <Navbar />
         </div>
-        {this.state.showCurrent ? <Current /> : <Upcoming />} 
-      </div>
+        <div className="item-shop-wrapper">
+          <h2 className="item-shop-header"> Fortnite Item Shop</h2>
+          <div className="item-shop-header-row">
+            <div className="item-buttons">
+              <button className={this.state.showCurrent ? "item-button-active" : "item-button"} onClick={() => this.changeMode(true)}> Current </button>
+              <button className={this.state.showCurrent ? "item-button" : "item-button-active"} onClick={() => this.changeMode(false)}> Upcoming </button>   
+            </div>
+            <p className="stat-paragraph">Shop Updating In: <Countdown /></p>
+          </div>       
+          {this.state.showCurrent ? <Current /> : <Upcoming />} 
+        </div>
 
-      {this.props.children}
-          
-      </>
+        {this.props.children}         
+      </div>
     )
   }
 }

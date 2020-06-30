@@ -112,25 +112,21 @@ class Challenge extends Component {
     )
     
     return(
-      <>
+      <div className="challenge-background-wrapper">
         <div className="nav-container">  
             <Navbar />
-        </div>  
-
+        </div>
         <div className="challenges-box-wrapper">
           <div className="challenges-header">
             <h2 className="challenges-title"> Fortnite Current Challenges</h2>
           </div>        
-          <div className="item-buttons">
-            <button className="item-button" onClick={() => this.changeMode(true)}> Weekly </button>
-            <button className="item-button" onClick={() => this.changeMode(false)}> Season </button>
+          <div className="challenge-buttons">
+            <button className={this.state.showWeekly ? "challenge-button-active" : "challenge-button"} onClick={() => this.changeMode(true)}> Weekly </button>
+            <button className={this.state.showWeekly ? "challenge-button" : "challenge-button-active"} onClick={() => this.changeMode(false)}> Season </button>
           </div>
-
-          {this.state.showWeekly ? <Weekly/> : <Season />} 
-          
-        </div>
-          
-      </>
+          {this.state.showWeekly ? <Weekly/> : <Season />}        
+        </div>       
+      </div>
     )
   }
 }
