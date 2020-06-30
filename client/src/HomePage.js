@@ -160,7 +160,7 @@ class HomePage extends Component {
               <input 
                 className="search-input"
                 type="text"
-                placeholder="Enter an Epic ID"
+                placeholder="Enter an Epic ID..."
                 onChange={this.handleContentChange}
               />
               <Link to={`${this.state.content}`}>
@@ -173,11 +173,17 @@ class HomePage extends Component {
                 </div>
               </Link>        
             </form>
-          </div>      
+          </div>
+          {this.state.isLoading ? 
+            <div className="loading-screen">
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+            </div>
+            :       
           <div className="preview-row-wrapper">
             <ItemPreview />
             <BattlePreview />
           </div> 
+          }
           <div className="home-credentials">
             <div className="credentials-element">
               <p>Created by: Neil Tengbumroong<br/>Epic ID: Neiliooo</p>

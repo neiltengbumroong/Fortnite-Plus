@@ -2,10 +2,19 @@
   box-sizing: border-box;
 }
 
+.achieve-background-wrapper {
+  background-image: url("/images/fortniteyellow.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .achieve-overall-wrapper {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 4%;
+  padding-bottom: 5%;
 }
 
 .achieve-header {
@@ -21,7 +30,7 @@
 
 .achievement-wrapper {
   columns: 3 auto;
-  
+ 
 }
 
 /* --------------------- Achievements - Individual  --------------------- */

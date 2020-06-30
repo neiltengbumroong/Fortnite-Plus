@@ -131,7 +131,7 @@ class Miscellaneous extends Component {
     );
     
     return (
-      <>
+      <div className="misc-background-wrapper">
         <div className="nav-container">  
           <Navbar />
         </div>
@@ -147,18 +147,22 @@ class Miscellaneous extends Component {
           </div>
 
           <div className="misc-buttons">
-            <button className="item-button" onClick={() => this.changeMode('s')}> All Seasons </button>
-            <button className="item-button" onClick={() => this.changeMode('m')}> All Maps </button>
-            <button className="item-button" onClick={() => this.changeMode('p')}> All POIs </button>
+            <button className={this.state.mode === 's' ? "misc-button-active" : "misc-button"} onClick={() => this.changeMode('s')}> All Seasons </button>
+            <button className={this.state.mode === 'm' ? "misc-button-active" : "misc-button"}  onClick={() => this.changeMode('m')}> All Maps </button>
+            <button className={this.state.mode === 'p' ? "misc-button-active" : "misc-button"}  onClick={() => this.changeMode('p')}> All POIs </button>
           </div>
 
-          <div className="misc-display">
-            {this.state.mode === 's' ? <Season /> : this.state.mode === 'm' ? <Map /> : <Point />}
-          </div>
-          
-          
+          {this.state.isLoading ? 
+            <div className="loading-screen">
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+            </div>       
+            :
+            <div className="misc-display">
+              {this.state.mode === 's' ? <Season /> : this.state.mode === 'm' ? <Map /> : <Point />}
+            </div>
+          }        
         </div>
-      </>
+      </div>
     )
   }
 }

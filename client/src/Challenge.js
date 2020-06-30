@@ -59,9 +59,12 @@ class Challenge extends Component {
     if (!this.state.isLoading) {
       weeklyChallenges = Object.keys(this.state.weeklyChallenges).map((week, i) =>
         <div key={i}>
-          <div className="weekly-header">
-            <h5>{this.state.weeklyChallenges[week].name}</h5>
+          <div className="weekly-header-wrapper">
+            <div className="weekly-header">
+              <h5>{this.state.weeklyChallenges[week].name}</h5>
+            </div>
           </div>
+
           <div className="challenge-row-items">
             {this.state.weeklyChallenges[week].challenges.map((challenge, i) => 
               <div key={i}>
@@ -76,7 +79,8 @@ class Challenge extends Component {
                 </div> 
               </div>         
           )}
-          </div>       
+          </div>
+          <hr className="challenge-hr"/>  
         </div>    
       )
 
@@ -97,14 +101,12 @@ class Challenge extends Component {
 
     const Weekly = () => (
       <div className="weekly-challenges-wrapper">
-        <h4 className="weekly-title">Weekly Challenges</h4>
         {weeklyChallenges}
       </div>
     );
 
     const Season = () => (
       <div className="weekly-challenges-wrapper"> 
-        <h4 className="weekly-title">Season Challenges</h4>
         <div className="challenge-row-items">
           {seasonChallenges} 
         </div>  
@@ -119,12 +121,18 @@ class Challenge extends Component {
         <div className="challenges-box-wrapper">
           <div className="challenges-header">
             <h2 className="challenges-title"> Fortnite Current Challenges</h2>
-          </div>        
+          </div>    
           <div className="challenge-buttons">
             <button className={this.state.showWeekly ? "challenge-button-active" : "challenge-button"} onClick={() => this.changeMode(true)}> Weekly </button>
             <button className={this.state.showWeekly ? "challenge-button" : "challenge-button-active"} onClick={() => this.changeMode(false)}> Season </button>
           </div>
-          {this.state.showWeekly ? <Weekly/> : <Season />}        
+          {this.state.isLoading ? 
+            <div className="loading-screen">
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+            </div>
+            :  
+            this.state.showWeekly ? <Weekly/> : <Season />
+          }       
         </div>       
       </div>
     )

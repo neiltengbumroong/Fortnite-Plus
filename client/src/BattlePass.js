@@ -64,7 +64,7 @@ class BattlePass extends Component {
           </div>
           <img 
             src={selectImage(element.type) ? element.images.background : element.images.icon}
-            onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
+            onError={(e)=>{e.target.onerror = null; e.target.src="/icons/Battle_Star_Icon.png"}} 
             height="200" 
             width="200" 
             alt="reward preview"
@@ -83,7 +83,7 @@ class BattlePass extends Component {
           </div>
           <img 
             src={selectImage(element.type) ? element.images.background : element.images.icon}
-            onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
+            onError={(e)=>{e.target.onerror = null; e.target.src="/icons/Battle_Star_Icon.png"}} 
             height="200" 
             width="200" 
             alt="reward preview"
@@ -120,7 +120,7 @@ class BattlePass extends Component {
 
     
     return (
-      <>
+      <div className="battle-background-wrapper">
         <div className="nav-container">  
           <Navbar />
         </div> 
@@ -128,13 +128,19 @@ class BattlePass extends Component {
           <div className="battle-header">
             <h2 className="battle-title"> Season {this.state.season ? this.state.season : null} Battle Pass Rewards</h2>
           </div>
-          <div className="item-buttons">
-            <button className="item-button" onClick={() => this.changeMode(true)}> Full </button>
-            <button className="item-button" onClick={() => this.changeMode(false)}> Free </button>
+          <div className="battle-buttons">
+            <button className={this.state.showPaid ? "battle-button-active" : "battle-button"} onClick={() => this.changeMode(true)}> Full </button>
+            <button className={this.state.showPaid ? "battle-button" : "battle-button-active"} onClick={() => this.changeMode(false)}> Free </button>
           </div>
-          {this.state.showPaid ? <PaidDiv /> : <FreeDiv />}
+          {this.state.isLoading ? 
+            <div className="loading-screen">
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+            </div>     
+            :   
+            this.state.showPaid ? <PaidDiv /> : <FreeDiv />
+          }
         </div> 
-      </>
+      </div>
       
     )
   }

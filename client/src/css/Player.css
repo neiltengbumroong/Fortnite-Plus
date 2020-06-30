@@ -19,7 +19,7 @@ html, body {
 }
 
 .player-background-wrapper {
-  background-image: url("/fortniteblue.jpg");
+  background-image: url("/images/fortniteblue.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -290,7 +290,7 @@ html, body {
   bottom: 0;
   right: 0;
   overflow: auto;
-  background-image: url("/fortniteblue.jpg");
+  background-image: url("/images/fortniteblue.jpg");
 }
 
 .error-main {
@@ -299,6 +299,20 @@ html, body {
 
 .return-button-wrapper {
   text-align: center;
+}
+
+.return-button {
+  font-family: fortniteFont;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+.return-button:hover {
+  background-color: slategray;
+  outline: 3px solid white;
 }
 
 .no-match-message {
@@ -313,7 +327,7 @@ html, body {
   font-family: fortniteFont;
   text-align: center;
   font-size: 40px;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .loading-screen-wrapper {
@@ -323,5 +337,5 @@ html, body {
   bottom: 0;
   right: 0;
   overflow: auto;
-  background-image: url("/fortniteblue.jpg");
+  background-image: url("/images/fortniteblue.jpg");
 }

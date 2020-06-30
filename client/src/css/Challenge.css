@@ -5,7 +5,7 @@
 /* --------------------- Headers and Main Wrappers --------------------- */
 
 .challenge-background-wrapper {
-  background-image: url("/fortnitepink.jpg");
+  background-image: url("/images/fortnitepink.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -16,6 +16,7 @@
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
+  padding-bottom: 5%;
 }
 
 .challenges-title {
@@ -31,12 +32,12 @@
 }
 
 .weekly-header {
-  background-color: grey;
+  background: rgb(255,206,0);
+  background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%); 
   font-family: fortniteFont;
-}
-
-.weekly-challenges-wrapper {
-  border: 2px solid black;
+  padding-left: 1%;
+  width: 15%;
+  margin: 0 auto;
 }
 
 .weekly-title {
@@ -74,12 +75,9 @@
   text-align: center;
 }
 
-.pie-chart-buttons {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  margin-bottom: 5%;
+.challenge-hr {
+  border: 2px solid black;
+  margin: 5% 10%;
 }
 
 
@@ -94,7 +92,8 @@
 /* --------------------- Buttons --------------------- */
 
 .challenge-buttons {
-  margin-bottom: 1%;
+  margin-bottom: 2%;
+  text-align: center;
 }
 
 .challenge-button {

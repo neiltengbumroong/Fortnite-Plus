@@ -6,6 +6,7 @@
   margin-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
+  padding-bottom: 5%;
 }
 
 .item-shop-header {
@@ -15,7 +16,7 @@
 }
 
 .item-shop-background-wrapper {
-  background-image: url("/fortniteyellow.jpg");
+  background-image: url("/images/fortniteyellow.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

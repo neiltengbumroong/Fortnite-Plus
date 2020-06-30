@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-}
+} 
 
 .home-container {
   margin-left: 10%;
@@ -8,11 +8,17 @@
 }
 
 .background-wrapper {
-  background-image: url("/fortniteblue.jpg");
+  background-image: url("/images/fortniteblue.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  padding-bottom: 3%;
+}
+
+.loading-screen {
+  height: 100%;
+  padding-bottom: 10%;
 }
 
 /* --------------------- Fonts --------------------- */
@@ -56,9 +62,6 @@
   text-align: center;
   margin-top: 3%;
   color: white;
-  @media screen and (max-width: 600px){
-    font-size: 10px;
-  }
 }
 
 .search-title-header {
@@ -116,11 +119,12 @@ input:focus {
 /* --------------------- Preview --------------------- */
 
 .home-row-title {
-  background: rgb(255,206,0);
-  background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%); 
   padding-left: 1%;
   font-family: fortniteFont;
+  background: rgb(255,206,0);
+  background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%); 
 }
+
 .preview-row-wrapper {
   display: flex;
   margin-top: 5%;
@@ -135,7 +139,7 @@ input:focus {
   margin-bottom: 2%;
   border-radius: 10px;
   color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
 }
 
 .reward-name-tag {
@@ -147,7 +151,6 @@ input:focus {
   font-size: 15px;
   font-family: fortniteFont;
   margin-bottom: 0;
-  /* background-color: white; */
 }
 
 .reward-description-preview {
@@ -155,7 +158,6 @@ input:focus {
   font-family: fortniteFont;
   text-align: center;
   margin-top: -4%;
-  /* background-color: white; */
 }
 
 
@@ -175,11 +177,12 @@ input:focus {
   background-color: grey;
   text-align: center;
   cursor: pointer;
+  
 }
 
 .preview-button:hover {
-  color: white;
-  background-color: slategrey;
+  background-color: slategray;
+  outline: 3px solid white;
 }
 
 .preview-button-wrapper {

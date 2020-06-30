@@ -426,6 +426,7 @@ class Player extends Component {
            </div>
             <div className="loading-screen">
               <h1>Retrieving Stats...</h1>
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
             </div>          
           </div>
           :

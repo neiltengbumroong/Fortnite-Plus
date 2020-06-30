@@ -54,8 +54,11 @@ class Item extends Component {
         <div className="nav-container">  
             <Navbar />
         </div>
-        {this.state.isLoading ? null :
-        <>
+        {this.state.isLoading ? 
+          <div className="loading-screen">
+            <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+          </div>    
+        :
           <div className="item-row-wrapper">
             <div className="item-image">
               <img src={this.state.itemDetails.item.images.background} height="450" width="450" alt="item preview" />
@@ -74,7 +77,6 @@ class Item extends Component {
               <p>Total Appearances: {this.state.itemDetails.item.shopHistory.length}</p>      
             </div>
           </div>         
-        </>
         }            
       </div>
     )

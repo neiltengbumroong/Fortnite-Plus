@@ -183,8 +183,14 @@ class ItemShop extends Component {
               <button className={this.state.showCurrent ? "item-button" : "item-button-active"} onClick={() => this.changeMode(false)}> Upcoming </button>   
             </div>
             <p className="stat-paragraph">Shop Updating In: <Countdown /></p>
-          </div>       
-          {this.state.showCurrent ? <Current /> : <Upcoming />} 
+          </div>
+          {this.state.isLoading ? 
+            <div className="loading-screen">
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+            </div>
+            :    
+            this.state.showCurrent ? <Current /> : <Upcoming />
+          }
         </div>
 
         {this.props.children}         

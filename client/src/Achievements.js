@@ -54,21 +54,25 @@ class Achievements extends Component {
       )
     }
     return (
-      <>
+      <div className="achieve-background-wrapper">
         <div className="nav-container">  
           <Navbar />
         </div>
-
         <div className="achieve-overall-wrapper">
           <div className="achieve-header">
             <h3 className="achieve-title">Fortnite Season {this.state.data.season} Achievements</h3>
           </div>
-          <div className="achievement-wrapper">
-            {achievements}
-          </div>
+          {this.state.isLoading ? 
+            <div className="loading-screen">
+              <img src="/svg/LoadingRing.svg" alt="loading svg"></img>
+            </div>   
+            :  
+            <div className="achievement-wrapper">
+              {achievements}
+            </div>
+          }
         </div>
-      </>
-
+      </div>
     )
   }
 
