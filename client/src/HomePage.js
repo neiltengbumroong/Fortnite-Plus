@@ -143,7 +143,7 @@ class HomePage extends Component {
     return (
       <div className="background-wrapper"> 
         <div className="nav-container">
-          <Navbar /> 
+          <Navbar page={"Home"}/> 
         </div>
         <div className="home-container">
           <div className="search-wrapper">

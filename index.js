@@ -27,6 +27,19 @@ const FortniteAPI = require("fortnite-api-io")
 const key = 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
 const fortniteAPI = new FortniteAPI(key);
 
+const statsURI = 'https://api.fortnitetracker.com/v1/profile/';
+
+
+const headers =  { 
+  'TRN-Api-Key': 'badf74d3-2421-4a13-87f9-cddb33a0dabc' 
+};
+
+app.get('/stats', function(req,res) {
+    request.get(statsURI + req.query.id, { headers }, 
+      (err, response, body) => { 
+        res.json(response.body);
+    });
+});
 
 app.get('/playerid', async function(req, res) {
   const id = await fortniteAPI.searchAccountId(req.query.name);

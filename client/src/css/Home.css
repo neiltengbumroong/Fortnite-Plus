@@ -31,23 +31,51 @@
 /* --------------------- Navbar --------------------- */
 
 .nav-container {
+  margin: 0 10%;
 }
 
 .main-nav {
   text-align: center;
-  background-color: #FFF;
+  /* background: #FFFFD8; */
+  /* background: #F7F48B; */
+  /* background: #82B3FF; */
+  background: transparent;
   padding: 1em;
 }
 
-.main-nav a {
+.item-link {
   font-family: fortniteFont;
   font-weight: 900;
   font-size: 25px;
   color: black;
   margin: 0.5em;
   text-decoration: none;
-  padding: 1.5em;
-  transition: 0.3s ease;  
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  transition: 0.3s ease; 
+}
+
+.item-link-active {
+  font-family: fortniteFont;
+  font-weight: 900;
+  font-size: 25px;
+  color: white;
+  margin: 0.5em;
+  text-decoration: none;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  transition: 0.3s ease;
+  border-bottom: 2px solid white;
+}
+
+.main-nav a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  transition: 0.3s ease; 
 }
 
 /* --------------------- Search Bar --------------------- */
@@ -91,11 +119,15 @@ input:focus {
   border-left: 2px solid black;
   border-bottom: 2px solid black;
   cursor: text;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 
 .search-icon-wrapper {
   border: 2px solid black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-left: none;
   text-align: center;
   padding: 12px;

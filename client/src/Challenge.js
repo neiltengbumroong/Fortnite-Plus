@@ -116,7 +116,7 @@ class Challenge extends Component {
     return(
       <div className="challenge-background-wrapper">
         <div className="nav-container">  
-            <Navbar />
+            <Navbar page={"Challenge"} />
         </div>
         <div className="challenges-box-wrapper">
           <div className="challenges-header">

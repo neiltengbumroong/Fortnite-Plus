@@ -122,7 +122,7 @@ class BattlePass extends Component {
     return (
       <div className="battle-background-wrapper">
         <div className="nav-container">  
-          <Navbar />
+          <Navbar page={"Pass"}/>
         </div> 
         <div className="battle-overall-wrapper">
           <div className="battle-header">

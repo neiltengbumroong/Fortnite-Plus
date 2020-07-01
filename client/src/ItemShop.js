@@ -173,7 +173,7 @@ class ItemShop extends Component {
     return (
       <div className="item-shop-background-wrapper">
         <div className="nav-container">  
-          <Navbar />
+          <Navbar page={"Shop"} />
         </div>
         <div className="item-shop-wrapper">
           <h2 className="item-shop-header"> Fortnite Item Shop</h2>

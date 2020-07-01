@@ -56,7 +56,7 @@ class Achievements extends Component {
     return (
       <div className="achieve-background-wrapper">
         <div className="nav-container">  
-          <Navbar />
+          <Navbar page={"Achieve"}/>
         </div>
         <div className="achieve-overall-wrapper">
           <div className="achieve-header">

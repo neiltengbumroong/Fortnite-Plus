@@ -133,7 +133,7 @@ class Miscellaneous extends Component {
     return (
       <div className="misc-background-wrapper">
         <div className="nav-container">  
-          <Navbar />
+          <Navbar page={"Misc"}/>
         </div>
         <div className="misc-overall-wrapper">
           <div className="header-stat-box">
