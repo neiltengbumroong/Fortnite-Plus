@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, navigate } from "@reach/router";
 import Navbar from './Navbar';
+import Navshort from './Navshort';
 import axios from 'axios';
 //import Background from './Background.js';
 
@@ -104,7 +105,7 @@ class HomePage extends Component {
             alt="reward preview"
           />      
           <div className="reward-description-preview">
-            <p className="description-paragraph">{normalizeRarity(element.rarity)} | {capFirst(element.type)}</p>
+            <p className="description-paragraph">{normalizeRarity(element.rarity)} | {nameFiller(capFirst(element.type))}</p>
             <p className="description-paragraph">Tier {element.tier}</p>
           </div>
         </div>
@@ -143,7 +144,8 @@ class HomePage extends Component {
     return (
       <div className="background-wrapper"> 
         <div className="nav-container">
-          <Navbar page={"Home"}/> 
+          <Navbar page={"Home"}/>
+          <Navshort page={"Home"} link={"/"}/>
         </div>
         <div className="home-container">
           <div className="search-wrapper">

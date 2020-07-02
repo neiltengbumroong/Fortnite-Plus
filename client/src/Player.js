@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import { chooseNameSize } from './utils/index.js';
 import { PieChart } from 'react-minimal-pie-chart';
 import { Link } from "@reach/router";
-//import Background from './Background.js';
+import Navshort from './Navshort';
 
 import './css/skeleton.css';
 import './css/normalize.css';
@@ -414,6 +414,7 @@ class Player extends Component {
       <div className="player-background-wrapper">
         <div className="nav-container">  
             <Navbar />
+            <Navshort/>
         </div>
         {this.state.hasError ? 
           <div className="error-screen">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Navshort from './Navshort';
 
 import './css/Miscellaneous.css';
 import './css/skeleton.css';
@@ -134,6 +135,7 @@ class Miscellaneous extends Component {
       <div className="misc-background-wrapper">
         <div className="nav-container">  
           <Navbar page={"Misc"}/>
+          <Navshort page={"Misc"} link={"/Miscellaneous"}/>
         </div>
         <div className="misc-overall-wrapper">
           <div className="header-stat-box">

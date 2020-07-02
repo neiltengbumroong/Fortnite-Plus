@@ -1,0 +1,110 @@
+@media screen and (max-width: 1100px) {
+  nav.main-nav {
+    display: none !important;
+  }
+
+  nav.short-nav {
+    text-align: center;
+    display: unset !important;
+    font-family: fortniteFont;
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  div.nav-header {
+    /* display: flex; */
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-top: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  div.navbar-dropdown {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5%;
+  }
+}
+
+/* --------------------- Navbar --------------------- */
+
+.nav-container {
+}
+
+.main-nav {
+  text-align: center;
+  background: transparent;
+  padding: 1em;
+  font-family: fortniteFont;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.short-nav {
+  display: none;
+}
+
+
+
+.nav-header-name {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid white;
+}
+
+.nav-icon {
+  text-align: right;
+  /* margin-right: 2%; 
+  margin-left: auto; */
+  cursor: pointer;
+  color: white;
+}
+
+.item-link-wrapper {
+  background-color: transparent;
+  text-align: left;
+}
+
+.item-link {
+  color: black;
+  margin: 0.5em;
+  text-decoration: none;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  transition: 0.3s ease; 
+}
+
+.item-link-short {
+  color: black;
+  margin: 0.5em;
+  text-decoration: none;
+  transition: 0.3s ease; 
+}
+
+.item-link-active {
+  color: white;
+  margin: 0.5em;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  transition: 0.3s ease;
+  border-bottom: 2px solid white;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  transition: 0.3s ease; 
+}
+
+.short-nav a:hover {
+  color: white;
+  border-bottom: 2px solid white;
+  transition: 0.3s ease; 
+}

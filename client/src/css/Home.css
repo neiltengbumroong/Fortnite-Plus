@@ -7,6 +7,66 @@
   margin-right: 10%;
 }
 
+
+@media screen and (max-width: 480px) {
+  div.background-wrapper {
+    height: 100%;
+    padding-bottom: 10%;
+  }
+  p.search-title-header {
+    font-size: 20px;
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+
+  p.description-paragraph {
+    font-size: 10px;
+  }
+
+  p.reward-name-tag {
+    font-size: 10px;
+  }
+
+  div.row-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important; 
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  div.background-wrapper {
+    height: 100%;
+  }
+  p.search-title-header {
+    font-size: 40px;
+  }
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+
+  p.description-paragraph {
+    font-size: 10px;
+  }
+
+  p.reward-name-tag {
+    font-size: 10px;
+  }
+  div.row-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important; 
+  }
+
+}
+
+
 .background-wrapper {
   background-image: url("/images/fortniteblue.jpg");
   background-repeat: no-repeat;
@@ -14,6 +74,10 @@
   background-attachment: fixed;
   background-position: center;
   padding-bottom: 3%;
+  /* height: 1000px;
+  width: 1400px; 
+  min-height: 100%;
+  min-width: 100%; */
 }
 
 .loading-screen {
@@ -28,72 +92,24 @@
 }
 
 
-/* --------------------- Navbar --------------------- */
 
-.nav-container {
-  margin: 0 10%;
-}
-
-.main-nav {
-  text-align: center;
-  /* background: #FFFFD8; */
-  /* background: #F7F48B; */
-  /* background: #82B3FF; */
-  background: transparent;
-  padding: 1em;
-}
-
-.item-link {
-  font-family: fortniteFont;
-  font-weight: 900;
-  font-size: 25px;
-  color: black;
-  margin: 0.5em;
-  text-decoration: none;
-  padding-top: 1.5em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 0.5em;
-  transition: 0.3s ease; 
-}
-
-.item-link-active {
-  font-family: fortniteFont;
-  font-weight: 900;
-  font-size: 25px;
-  color: white;
-  margin: 0.5em;
-  text-decoration: none;
-  padding-top: 1.5em;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 0.5em;
-  transition: 0.3s ease;
-  border-bottom: 2px solid white;
-}
-
-.main-nav a:hover {
-  color: white;
-  border-bottom: 2px solid white;
-  transition: 0.3s ease; 
-}
 
 /* --------------------- Search Bar --------------------- */
 
 .search-wrapper {
-  margin-left: 13%;
-  margin-right: 13%;
+  padding-left: 13%;
+  padding-right: 13%;
 }
 
 .search-title {
   font-family: fortniteFont;
   text-align: center;
-  margin-top: 3%;
+  padding-top: 3%;
   color: white;
 }
 
 .search-title-header {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 
@@ -159,7 +175,8 @@ input:focus {
 
 .preview-row-wrapper {
   display: flex;
-  margin-top: 5%;
+  padding-top: 4%;
+  justify-content: left;
 }
 
 .reward-wrapper-preview {
@@ -167,7 +184,6 @@ input:focus {
   min-width: 50px;
   min-height: 50px;
   margin-left: 1%;
-  margin-right: auto; 
   margin-bottom: 2%;
   border-radius: 10px;
   color: white;
@@ -199,7 +215,7 @@ input:focus {
 }
 
 .preview-element {
-  margin: 0 1.5%;
+  padding: 0 1.5%;
   padding-bottom: 1%;
 }
 
@@ -226,7 +242,6 @@ input:focus {
 .home-credentials {
   margin-top: 5%;
   font-family: fortniteFont;
-  border-top: 2px solid black;
   display: flex;
   justify-content: space-between;
   padding: 1%;

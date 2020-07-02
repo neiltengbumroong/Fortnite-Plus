@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Navshort from './Navshort';
 
 import './css/skeleton.css';
 import './css/normalize.css';
@@ -123,6 +124,7 @@ class BattlePass extends Component {
       <div className="battle-background-wrapper">
         <div className="nav-container">  
           <Navbar page={"Pass"}/>
+          <Navshort page={"Battle Pass"} link={"/BattlePass"}/>
         </div> 
         <div className="battle-overall-wrapper">
           <div className="battle-header">

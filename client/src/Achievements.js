@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Navshort from './Navshort';
 
 import './css/Achievements.css';
 
@@ -57,6 +58,7 @@ class Achievements extends Component {
       <div className="achieve-background-wrapper">
         <div className="nav-container">  
           <Navbar page={"Achieve"}/>
+          <Navshort page={"Achievements"} link={"/Achievements"}/>
         </div>
         <div className="achieve-overall-wrapper">
           <div className="achieve-header">

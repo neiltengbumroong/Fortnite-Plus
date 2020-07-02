@@ -13,7 +13,7 @@
 }
 
 .challenges-box-wrapper {
-  margin-top: 5%;
+  margin-top: 4%;
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 5%;
@@ -35,9 +35,9 @@
   background: rgb(255,206,0);
   background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%); 
   font-family: fortniteFont;
-  padding-left: 1%;
   width: 15%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .weekly-title {
@@ -86,7 +86,7 @@
 .challenge-row-items{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 /* --------------------- Buttons --------------------- */

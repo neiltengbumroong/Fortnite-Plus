@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Navshort from './Navshort';
 
 import './css/Challenge.css';
 import './css/skeleton.css';
@@ -117,6 +118,7 @@ class Challenge extends Component {
       <div className="challenge-background-wrapper">
         <div className="nav-container">  
             <Navbar page={"Challenge"} />
+            <Navshort page={"Challenge"} link={"/Challenge"}/>
         </div>
         <div className="challenges-box-wrapper">
           <div className="challenges-header">

@@ -72,7 +72,11 @@ function pictureFiller(name) {
 
 function nameFiller(name) {
   if (name === "") {
-    return "Banner/Upgrade";
+    return "N/A";
+  }
+
+  if (name === "Bannertoken") {
+    return "Banner"
   }
 
   return name;

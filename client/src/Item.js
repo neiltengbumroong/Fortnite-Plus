@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import { normalizeRarity, capFirst } from './utils/index.js';
-// import Background from './Background.js';
+import Navshort from './Navshort';
 
-// import './css/skeleton.css';
-// import './css/normalize.css';
+import './css/skeleton.css';
+import './css/normalize.css';
 import './css/Item.css';
 
 
@@ -53,6 +53,7 @@ class Item extends Component {
       <div className="item-background-wrapper">
         <div className="nav-container">  
             <Navbar />
+            <Navshort link={"/"}/>
         </div>
         {this.state.isLoading ? 
           <div className="loading-screen">

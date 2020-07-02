@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
-// import Background from './Background.js';
+import Navshort from './Navshort';
 import { Link } from "@reach/router";
 import Countdown from './Countdown';
 
@@ -174,6 +174,7 @@ class ItemShop extends Component {
       <div className="item-shop-background-wrapper">
         <div className="nav-container">  
           <Navbar page={"Shop"} />
+          <Navshort page={"Shop"} link={"/ItemShop"}/>
         </div>
         <div className="item-shop-wrapper">
           <h2 className="item-shop-header"> Fortnite Item Shop</h2>
