@@ -2,6 +2,65 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 480px) {
+  div.background-wrapper {
+    height: 100%;
+    padding-bottom: 10%;
+  }
+
+  h2.achieve-title {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 6px;
+  }
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+
+  img.achieve-pic {
+    display: none;
+  }
+
+  div.achievement-ind-pic-wrapper {
+    font-size: 10px;
+  }
+  div.achievement-ind-description {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  div.background-wrapper {
+    height: 100%;
+  }
+
+
+  h2.achieve-title {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 10px;
+  }
+
+  img.achieve-pic {
+    display: none;
+  }
+
+  div.achievement-ind-pic-wrapper {
+    font-size: 15px;
+  }
+  div.achievement-ind-description {
+    font-size: 15px;
+  }
+
+}
+
 .achieve-background-wrapper {
   background-image: url("/images/fortniteorange.jpg");
   background-repeat: no-repeat;
@@ -19,8 +78,6 @@
 
 .achieve-header {
   text-align: center;
-  font-family: fortniteFont;
-  font-size: 25px;
 }
 
 .achieve-title {

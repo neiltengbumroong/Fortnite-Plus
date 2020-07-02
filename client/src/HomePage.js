@@ -79,7 +79,7 @@ class HomePage extends Component {
       dailyItems = this.state.items.daily.map((eachItem, i) =>
         <div className="item-wrapper" key={i}>    
           <Link to={`/ItemShop/${eachItem.id}`}>
-            <img src={eachItem.full_background} alt="Fortnite shop preview" height="130" width="130"/>
+            <img src={eachItem.full_background} className="preview-img" alt="Fortnite shop preview" height="130" width="130"/>
           </Link>
         </div>
       );
@@ -87,7 +87,7 @@ class HomePage extends Component {
       featuredItems = !this.state.items.featured ? null : this.state.items.featured.slice(0, 3).map((eachItem, i) =>
         <div className="item-wrapper" key={i}>    
           <Link to={`/ItemShop/${eachItem.id}`}>
-            <img src={eachItem.full_background} alt="Fortnite shop preview" height="130" width="130"/>
+            <img src={eachItem.full_background} className="preview-img" alt="Fortnite shop preview" height="130" width="130"/>
           </Link>
         </div>
       );
@@ -100,6 +100,7 @@ class HomePage extends Component {
           <img 
             src={selectImage(element.type) ? element.images.background : element.images.icon}
             onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
+            className="preview-img"
             height="110" 
             width="110" 
             alt="reward preview"

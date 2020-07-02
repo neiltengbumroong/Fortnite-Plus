@@ -17,7 +17,7 @@
     font-size: 20px;
   }
 
-  img {
+  img.preview-img {
     height: 30px;
     width: 30px;
   }
@@ -46,9 +46,9 @@
     font-size: 40px;
   }
 
-  img {
-    height: 60px;
-    width: 60px;
+  img.preview-img {
+    height: 80px;
+    width: 80px;
   }
 
   p.description-paragraph {
@@ -61,7 +61,8 @@
   div.row-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center !important; 
+    justify-content: center !important;
+    columns: 2 auto;
   }
 
 }
@@ -74,10 +75,6 @@
   background-attachment: fixed;
   background-position: center;
   padding-bottom: 3%;
-  /* height: 1000px;
-  width: 1400px; 
-  min-height: 100%;
-  min-width: 100%; */
 }
 
 .loading-screen {

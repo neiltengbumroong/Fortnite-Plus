@@ -65,7 +65,8 @@ class BattlePass extends Component {
           </div>
           <img 
             src={selectImage(element.type) ? element.images.background : element.images.icon}
-            onError={(e)=>{e.target.onerror = null; e.target.src="/icons/Battle_Star_Icon.png"}} 
+            onError={(e)=>{e.target.onerror = null; e.target.src="/icons/Battle_Star_Icon.png"}}
+            className="battle-pic"
             height="200" 
             width="200" 
             alt="reward preview"
@@ -84,7 +85,8 @@ class BattlePass extends Component {
           </div>
           <img 
             src={selectImage(element.type) ? element.images.background : element.images.icon}
-            onError={(e)=>{e.target.onerror = null; e.target.src="/icons/Battle_Star_Icon.png"}} 
+            onError={(e)=>{e.target.onerror = null; e.target.src="/icons/Battle_Star_Icon.png"}}
+            className="battle-pic"
             height="200" 
             width="200" 
             alt="reward preview"

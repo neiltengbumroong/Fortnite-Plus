@@ -1,10 +1,92 @@
-* {
-  box-sizing: border-box;
+@media screen and (max-width: 480px) {
+  div.background-wrapper {
+    height: 100%;
+    padding-bottom: 10%;
+  }
+
+  p.title-header,
+  p.lifetime-header,
+  div.main-account-lvl {
+    font-size: 10px;
+  }
+
+  p.title-stat {
+    font-size: 18px;
+  }
+
+  p.lifetime-stat {
+    font-size: 15px;
+  }
+
+  h5.lifetime-title,
+  h5.mode-title,
+  div.loading-screen {
+    font-size: 15px;
+  }
+
+  p.ind-stat-header,
+  div.no-match-message {
+    font-size: 9px;
+  }
+
+  p.ind-stat {
+    font-size: 12px;
+  }
+
+  div.main-name-small,
+  div.main-name-medium,
+  div.main-name-large {
+    font-size: 20px;
+  }
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+@media screen and (max-width: 800px) {
+
+  div.background-wrapper {
+    height: 100%;
+  }
+  
+  p.title-header,
+  div.error-message-wrapper,
+  div.main-account-lvl,
+  p.ind-stat {
+    font-size: 15px;
+  }
+
+  p.title-stat {
+    font-size: 25px;
+  }
+
+  p.lifetime-header,
+  p.ind-stat-header,
+  div.no-match-message {
+    font-size: 12px;
+  }
+
+  p.lifetime-stat {
+    font-size: 18px;
+  }
+
+  h5.lifetime-title,
+  h5.mode-title,
+  div.loading-screen {
+    font-size: 20px;
+  }
+
+  div.main-name {
+    font-size: 30px;
+  }
+
+  p.error-main {
+    font-size: 23px;
+  } 
+
+  div.main-name-small,
+  div.main-name-medium,
+  div.main-name-large {
+    font-size: 30px;
+  }
+
 }
 
 .overall-stat-wrapper {
@@ -31,7 +113,6 @@ html, body {
 
 .title-wrapper {
   display: flex;
-  height: 50%;
 }
 
 .main-title {
@@ -62,9 +143,10 @@ html, body {
   font-family: fortniteFont;
   font-size: 30px;
   text-align: center;
-  margin-bottom: -0.1%;
+  padding: 0;
   background: rgb(128, 211, 252);
   background: linear-gradient(90deg, rgba(0, 201, 255, 1) 40%, rgb(128, 211, 252) 90%);
+  background-repeat: repeat-y;
 }
 
 .main-overview {
@@ -72,13 +154,15 @@ html, body {
   width: 80%;
   padding: 0;
   border: 4px solid rgb(21, 163, 235);
+  background: rgb(128, 211, 252);
 }
 
 .overview-box-wrapper {
   display: flex;
-  margin: 0;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  margin-top: -1.5%;
   background: rgb(128, 211, 252);
-  
 }
 
 .title-box {

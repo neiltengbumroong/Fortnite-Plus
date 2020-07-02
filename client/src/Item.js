@@ -61,8 +61,8 @@ class Item extends Component {
           </div>    
         :
           <div className="item-row-wrapper">
-            <div className="item-image">
-              <img src={this.state.itemDetails.item.images.background} height="450" width="450" alt="item preview" />
+            <div className="item-image-wrapper">
+              <img src={this.state.itemDetails.item.images.background} className="item-image" height="450" width="450" alt="item preview" />
             </div>
             <div className="item-details">
               <div className="item-title">

@@ -4,6 +4,42 @@
   src: url('../fonts/BurbankBigCondensed-Black.otf');
 }
 
+@media screen and (max-width: 480px) {
+  div.background-wrapper {
+    height: 100%;
+    padding-bottom: 10%;
+  }
+
+  div.item-row-wrapper {
+    font-size: 10px;
+  }
+
+  div.item-title {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  div.background-wrapper {
+    height: 100%;
+  }
+
+  img.item-image {
+    height: 200px;
+    width: 200px;
+  }
+
+  div.item-row-wrapper {
+    font-size: 15px;
+  }
+
+  div.item-title {
+    font-size: 15px;
+  }
+
+}
+
 .item-background-wrapper {
   position: fixed;
   top: 0;
@@ -41,7 +77,7 @@
   margin-right: 10%;
 }
 
-.item-image {
+.item-image-wrapper {
   padding-right: 2.5%;
 }
 

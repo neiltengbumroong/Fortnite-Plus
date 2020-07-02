@@ -2,6 +2,55 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 480px) {
+  div.background-wrapper {
+    height: 100%;
+    padding-bottom: 10%;
+  }
+
+  button.item-button, button.item-button-active {
+    font-size: 10px;
+  }
+
+  p.stat-paragraph {
+    font-size: 10px;
+  }
+
+  h2.item-shop-header {
+    font-size: 20px;
+  }
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  div.background-wrapper {
+    height: 100%;
+  }
+
+  button.item-button, button.item-button-active {
+    font-size: 15px;
+  }
+
+  p.stat-paragraph {
+    font-size: 15px;
+  }
+
+  h2.item-shop-header {
+    font-size: 30px;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+}
+
 .item-shop-wrapper {
   margin-top: 4%;
   margin-left: 10%;

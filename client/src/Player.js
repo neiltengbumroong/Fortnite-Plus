@@ -214,13 +214,10 @@ class Player extends Component {
             <p className="lifetime-header">Players Outlived</p>
             <p className="lifetime-stat">{soloStats.playersoutlived + duoStats.playersoutlived + squadStats.playersoutlived}</p>
           </div>
-
-
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Time Played</p>
             <p className="lifetime-stat">{prettyMS((soloStats.minutesplayed + duoStats.minutesplayed + squadStats.minutesplayed) * MS_CONVERT)}</p>
           </div>
-
           <div className="lifetime-stat-box">
             <p className="lifetime-header">Average Score</p>
             <p className="lifetime-stat">{Math.round((soloStats.score + duoStats.score + squadStats.score)/

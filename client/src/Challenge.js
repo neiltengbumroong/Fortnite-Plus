@@ -70,12 +70,12 @@ class Challenge extends Component {
             {this.state.weeklyChallenges[week].challenges.map((challenge, i) => 
               <div key={i}>
                 <div className="challenge-description">
-                  <p>{challenge.title}</p>
+                  <p className="challenge-paragraph">{challenge.title}</p>
                   <div className="progress">
-                    <p>Progress: 0/{challenge.progress_total}</p>
+                    <p className="challenge-paragraph">Progress: 0/{challenge.progress_total}</p>
                   </div>      
                   <div className="xp-reward">
-                    <p>{challenge.xp} XP</p>
+                    <p className="challenge-paragraph">{challenge.xp} XP</p>
                   </div>       
                 </div> 
               </div>         

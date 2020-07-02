@@ -43,7 +43,7 @@ class Achievements extends Component {
           <div className="achievement-ind-pic">
             <div className="achievement-ind-pic-wrapper">
               <p>{element.name}</p>
-              <img src={element.image} height="50" width="50" alt="achievement preview"/>
+              <img src={element.image} className="achieve-pic" height="50" width="50" alt="achievement preview"/>
             </div>         
           </div>
           <div className="achievement-ind-description">
@@ -62,7 +62,7 @@ class Achievements extends Component {
         </div>
         <div className="achieve-overall-wrapper">
           <div className="achieve-header">
-            <h3 className="achieve-title">Fortnite Season {this.state.data.season} Achievements</h3>
+            <h2 className="achieve-title">Fortnite Season {this.state.data.season} Achievements</h2>
           </div>
           {this.state.isLoading ? 
             <div className="loading-screen">

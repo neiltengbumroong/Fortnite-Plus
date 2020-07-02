@@ -2,6 +2,62 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 480px) {
+  div.background-wrapper {
+    height: 100%;
+    padding-bottom: 10%;
+  }
+
+  h2.battle-title {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 10px;
+  }
+
+  div.reward-description {
+    font-size: 10px;
+  }
+
+  div.reward-name {
+    font-size: 10px;
+  }
+
+  div.reward-type-title {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  div.background-wrapper {
+    height: 100%;
+  }
+
+  h2.battle-title {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  div.reward-description {
+    font-size: 15px;
+  }
+
+  div.reward-name {
+    font-size: 15px;
+  }
+
+  div.reward-type-title {
+    font-size: 15px;
+  }
+
+
+}
+
 /* --------------------- Headers and Main Wrappers --------------------- */
 
 .battle-background-wrapper {
@@ -10,6 +66,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  padding-bottom: 5%;
 }
 
 .battle-overall-wrapper {
@@ -49,8 +106,6 @@
 
 .reward-wrapper {
   border: 3px solid black;
-  min-width: 204px;
-  min-height: 204px;
   margin-left: 1%;
   margin-right: auto; 
   margin-bottom: 2%;
