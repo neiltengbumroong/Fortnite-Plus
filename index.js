@@ -9,27 +9,17 @@ const port = process.env.PORT || 5000;
 
 
 app.use(cors());
-// app.use('/public', express.static(path.join(__dirname, 'static')));
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 app.get('/', (req, res) => {
-  res.send("listening on port 5000!")
-  // res.sendFile(path.join(__dirname + '/static/index.html'));
+  res.sendFile(path.join(__dirname + '/static/index.html'));
 })
 
-const FortniteAPI = require("fortnite-api-io")
-const key = process.env.API_KEY;
+const FortniteAPI = require("fortnite-api-io");
+const key = process.env.API_KEY || 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
 const fortniteAPI = new FortniteAPI(key);
 
-
-
-app.get('/stats', function(req,res) {
-    request.get(statsURI + req.query.id, { headers }, 
-      (err, response, body) => { 
-        res.json(response.body);
-    });
-});
 
 app.get('/playerid', async function(req, res) {
   const id = await fortniteAPI.searchAccountId(req.query.name);
