@@ -9,7 +9,7 @@ import './css/normalize.css';
 import './css/Item.css';
 
 
-const DETAILS_URI = 'http://localhost:5000/itemdetails';
+const DETAILS_URI = window.location.hostname === 'localhost' ? 'http://localhost:5000/itemdetails' : 'https://fortnite-plus.herokuapp.com/itemdetails';
 
 
 class Item extends Component {

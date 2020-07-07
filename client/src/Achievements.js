@@ -5,7 +5,7 @@ import Navshort from './Navshort';
 
 import './css/Achievements.css';
 
-const ACHIEVE_URL = 'http://localhost:5000/achievements';
+const ACHIEVE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/achievements' : 'https://fortnite-plus.herokuapp.com/achievements';
 
 
 class Achievements extends Component {

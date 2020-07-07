@@ -9,7 +9,7 @@ import './css/BattlePass.css';
 
 import { normalizeRarity, capFirst, selectImage, nameFiller } from './utils/index.js';
 
-const BATTLE_URL = 'http://localhost:5000/battlepass';
+const BATTLE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/battlepass' : 'https://fortnite-plus.herokuapp.com/battlepass';
 
 class BattlePass extends Component {
   constructor(props) {

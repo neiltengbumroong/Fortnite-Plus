@@ -14,8 +14,8 @@ import './css/Home.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 
-const STORE_URL = 'http://localhost:5000/store';
-const BATTLE_URL = 'http://localhost:5000/battlepass';
+const STORE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/store' : 'https://fortnite-plus.herokuapp.com/store';
+const BATTLE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/battlepass' : 'https://fortnite-plus.herokuapp.com/battlepass';
 
 class HomePage extends Component {
   constructor(props) {

@@ -8,7 +8,7 @@ import './css/skeleton.css';
 import './css/normalize.css';
 
 
-const CHALLENGE_URL = 'http://localhost:5000/challenges';
+const CHALLENGE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/challenges' : 'https://fortnite-plus.herokuapp.com/challenges';
 
 /* TODO: Potentially convert challenges into array so can be sorted by week */
 /* Set button to active immediately on render */

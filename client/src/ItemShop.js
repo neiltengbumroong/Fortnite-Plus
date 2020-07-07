@@ -10,8 +10,8 @@ import './css/ItemShop.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 
-const STORE_URL = 'http://localhost:5000/store';
-const UPCOMING_URL = 'http://localhost:5000/upcomingstore';
+const STORE_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/store' : 'https://fortnite-plus.herokuapp.com/store';
+const UPCOMING_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/upcomingstore' : 'https://fortnite-plus.herokuapp.com/upcomingstore';
 
 
 var specialArr = [];

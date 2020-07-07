@@ -7,9 +7,9 @@ import './css/Miscellaneous.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 
-const SEASONS_URL = 'http://localhost:5000/prevseasons';
-const MAPS_URL = 'http://localhost:5000/prevmaps';
-const POINTS_URL = 'http://localhost:5000/points';
+const SEASONS_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/prevseasons' : 'https://fortnite-plus.herokuapp.com/prevseasons';
+const MAPS_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/prevmaps' : 'https://fortnite-plus.herokuapp.com/prevmaps';
+const POINTS_URL = window.location.hostname === 'localhost' ? 'http://localhost:5000/points' : 'https://fortnite-plus.herokuapp.com/points';
 
 class Miscellaneous extends Component {
   constructor(props) {

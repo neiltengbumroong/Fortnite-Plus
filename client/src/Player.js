@@ -13,8 +13,8 @@ import './css/Player.css';
 
 const MS_CONVERT = 60000;
 
-const ACCOUNT_URI = 'http://localhost:5000/playerid';
-const STATS_URI = 'http://localhost:5000/playerstats';
+const ACCOUNT_URI = window.location.hostname === 'localhost' ? 'http://localhost:5000/playerid' : 'https://fortnite-plus.herokuapp.com/playerid';
+const STATS_URI = window.location.hostname === 'localhost' ? 'http://localhost:5000/playerstats' : 'https://fortnite-plus.herokuapp.com/playerstats';
 
 const DEFAULT_STAT = { 
   kd: 0,
