@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+/* --------------------- Media Queries - Responsive CSS --------------------- */
 
 @media screen and (max-width: 480px) {
   div.background-wrapper {
@@ -16,24 +14,19 @@
     font-size: 6px;
   }
 
-  img {
-    height: 60px;
-    width: 60px;
-  }
-
   img.achieve-pic {
     display: none;
   }
 
   div.achievement-ind-pic-wrapper {
-    font-size: 10px;
+    font-size: 5px;
   }
   div.achievement-ind-description {
-    font-size: 10px;
+    font-size: 5px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
   div.background-wrapper {
     height: 100%;

@@ -1,11 +1,14 @@
-* {
-  box-sizing: border-box;
-}
+/* --------------------- Media Queries - Responsive CSS --------------------- */
 
 @media screen and (max-width: 480px) {
   div.background-wrapper {
     height: 100%;
     padding-bottom: 10%;
+  }
+
+  div.weekly-header {
+    background: none;
+    text-align: center;
   }
 
   button.challenge-button, button.challenge-button-active {
@@ -52,6 +55,11 @@
 
   button.challenge-button, button.challenge-button-active {
     font-size: 15px;
+  }
+
+  div.weekly-header {
+    background: none;
+    text-align: center;
   }
 
   p.stat-paragraph {

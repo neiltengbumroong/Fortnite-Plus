@@ -1,8 +1,4 @@
-/* --------------------- Fonts --------------------- */
-@font-face {
-  font-family: fortniteFont;
-  src: url('../fonts/BurbankBigCondensed-Black.otf');
-}
+/* --------------------- Media Queries - Responsive CSS --------------------- */
 
 @media screen and (max-width: 480px) {
   div.background-wrapper {
@@ -52,7 +48,6 @@
 
 .item-title {
   font-size: 20px;
-  /* text-align: center; */
   margin-top: 0;
   font-family: fortniteFont;
 }
@@ -73,8 +68,6 @@
   display: flex;
   justify-content: center;
   margin-top: 7%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .item-image-wrapper {

@@ -5,9 +5,6 @@ import './css/Nav.css';
 import './css/skeleton.css';
 import './css/normalize.css';
 
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 class Navbar extends Component {
   constructor(props) {
     super(props);

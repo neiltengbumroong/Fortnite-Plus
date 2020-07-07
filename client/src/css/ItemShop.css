@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+/* --------------------- Media Queries - Responsive CSS --------------------- */
 
 @media screen and (max-width: 480px) {
   div.background-wrapper {

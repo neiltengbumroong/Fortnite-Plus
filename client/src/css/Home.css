@@ -74,7 +74,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding-bottom: 3%;
+  padding-bottom: 1%;
 }
 
 .loading-screen {
@@ -231,6 +231,7 @@ input:focus {
 }
 
 .preview-button-wrapper {
+  padding-top: 5%;
   text-align: center;
 }
 

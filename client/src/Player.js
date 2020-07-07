@@ -33,13 +33,6 @@ const DEFAULT_STAT = {
   winrate: 0.0
 };
 
-const DEFAULT_CHART = [
-  { title: 'Solo', value: 0, color: '#5cfc7b' },
-  { title: 'Duo', value: 0, color: '#c272d9' },
-  { title: 'Squad', value: 0, color: 'rgba(252, 164, 0, 1)' }
-];
-
-
 class Player extends Component {
   constructor(props) {
     super(props);

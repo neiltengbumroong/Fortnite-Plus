@@ -71,20 +71,11 @@ class HomePage extends Component {
   render() {
 
     let dailyItems = null;
-    let featuredItems = null;
     let battlePass = null;
 
 
     if (!this.state.isLoading) {
       dailyItems = this.state.items.daily.map((eachItem, i) =>
-        <div className="item-wrapper" key={i}>    
-          <Link to={`/ItemShop/${eachItem.id}`}>
-            <img src={eachItem.full_background} className="preview-img" alt="Fortnite shop preview" height="130" width="130"/>
-          </Link>
-        </div>
-      );
-
-      featuredItems = !this.state.items.featured ? null : this.state.items.featured.slice(0, 3).map((eachItem, i) =>
         <div className="item-wrapper" key={i}>    
           <Link to={`/ItemShop/${eachItem.id}`}>
             <img src={eachItem.full_background} className="preview-img" alt="Fortnite shop preview" height="130" width="130"/>
@@ -189,7 +180,7 @@ class HomePage extends Component {
           }
           <div className="home-credentials">
             <div className="credentials-element">
-              <p>Created by: Neil Tengbumroong<br/>Epic ID: Neiliooo</p>
+              <p>Created by: Neil Tengbumroong<br/>Date: July 2020<br />Epic ID: Neiliooo</p>
             </div>
             <div className="credentials-element">
                 <p>API provided by: <a href="https://fortniteapi.io/">FortniteAPI.io</a></p>

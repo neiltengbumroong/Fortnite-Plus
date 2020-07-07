@@ -1,8 +1,5 @@
 const express = require('express');
 const path = require('path');
-const axios = require('axios');
-const bodyParser = require('body-parser');
-const queryString = require('querystring');
 const request = require('request');
 const cors = require('cors');
 
@@ -12,10 +9,8 @@ const port = process.env.PORT || 5000;
 
 
 app.use(cors());
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use('/public', express.static(path.join(__dirname, 'static')))
-app.use('/public', express.static(path.join(__dirname, 'static')));
+// app.use('/public', express.static(path.join(__dirname, 'static')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 app.get('/', (req, res) => {
@@ -24,15 +19,10 @@ app.get('/', (req, res) => {
 })
 
 const FortniteAPI = require("fortnite-api-io")
-const key = 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
+const key = process.env.API_KEY || 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
 const fortniteAPI = new FortniteAPI(key);
 
-const statsURI = 'https://api.fortnitetracker.com/v1/profile/';
 
-
-const headers =  { 
-  'TRN-Api-Key': 'badf74d3-2421-4a13-87f9-cddb33a0dabc' 
-};
 
 app.get('/stats', function(req,res) {
     request.get(statsURI + req.query.id, { headers }, 

@@ -1,3 +1,5 @@
+/* --------------------- Media Queries - Responsive CSS --------------------- */
+
 @media screen and (max-width: 480px) {
   div.background-wrapper {
     height: 100%;
@@ -37,6 +39,11 @@
   div.main-name-medium,
   div.main-name-large {
     font-size: 20px;
+  }
+
+  button.chart-button,
+  button.chart-button-active {
+    font-size: 10px;
   }
 }
 
@@ -85,6 +92,11 @@
   div.main-name-medium,
   div.main-name-large {
     font-size: 30px;
+  }
+
+  button.chart-button,
+  button.chart-button-active {
+    font-size: 15px;
   }
 
 }

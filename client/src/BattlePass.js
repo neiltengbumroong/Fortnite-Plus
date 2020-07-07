@@ -7,7 +7,7 @@ import './css/skeleton.css';
 import './css/normalize.css';
 import './css/BattlePass.css';
 
-import { normalizeRarity, capFirst, selectImage, pictureFiller, nameFiller } from './utils/index.js';
+import { normalizeRarity, capFirst, selectImage, nameFiller } from './utils/index.js';
 
 const BATTLE_URL = 'http://localhost:5000/battlepass';
 
@@ -130,7 +130,7 @@ class BattlePass extends Component {
         </div> 
         <div className="battle-overall-wrapper">
           <div className="battle-header">
-            <h2 className="battle-title"> Season {this.state.season ? this.state.season : null} Battle Pass Rewards</h2>
+            <h2 className="battle-title">Fortnite Season {this.state.season ? this.state.season : null} Battle Pass Rewards</h2>
           </div>
           <div className="battle-buttons">
             <button className={this.state.showPaid ? "battle-button-active" : "battle-button"} onClick={() => this.changeMode(true)}> Full </button>
