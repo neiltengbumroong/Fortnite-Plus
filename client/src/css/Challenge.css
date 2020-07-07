@@ -38,7 +38,6 @@
   div.challenge-description {
     border-radius: 5px;
     border: 2px solid black;
-    font-family: fortniteFont;
     font-size: 8px;
     height: 100px;
     width: 80px;
@@ -51,6 +50,11 @@
 
   div.background-wrapper {
     height: 100%;
+  }
+
+  div.challenges-box-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   button.challenge-button, button.challenge-button-active {
@@ -88,7 +92,6 @@
   div.challenge-description {
     border-radius: 5px;
     border: 2px solid black;
-    font-family: fortniteFont;
     font-size: 10px;
     height: 150px;
     width: 100px;
@@ -106,23 +109,22 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  font-family: fortniteFont;
 }
 
 .challenges-box-wrapper {
   margin-top: 4%;
   margin-left: 10%;
   margin-right: 10%;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 .challenges-title {
-  font-family: fortniteFont;
   font-size: 45px;
   text-align: center;
 }
 
 .challenges-stats {
-  font-family: fortniteFont;
   text-align: center;
   font-size: 25px;
 }
@@ -130,7 +132,6 @@
 .weekly-header {
   background: rgb(255,206,0);
   background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%); 
-  font-family: fortniteFont;
   width: 15%;
   margin: 0 auto;
   text-align: center;
@@ -138,14 +139,12 @@
 
 .weekly-title {
   text-align: center;
-  font-family: fortniteFont;
   margin-top: 2%;
 }
 /* --------------------- Challenges - Individual --------------------- */
 .challenge-description {
   border-radius: 5px;
   border: 2px solid black;
-  font-family: fortniteFont;
   font-size: 20px;
   height: 250px;
   width: 200px;
@@ -187,7 +186,7 @@
 .challenge-row-items{
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
 }
 
 /* --------------------- Buttons --------------------- */
@@ -202,7 +201,6 @@
   background: transparent;
   color: black;
   cursor: pointer;
-  font-family: fortniteFont;
   font-size: 25px;
   transition: 0.4s ease; 
 }
@@ -224,16 +222,8 @@
   background: transparent;
   color: white;
   cursor: black;
-  font-family: fortniteFont;
   font-size: 25px;
   background: transparent;
   box-shadow: inset 0 -2px 0 0 white;
   outline: none;
-}
-
-/* --------------------- Fonts --------------------- */
-
-@font-face {
-  font-family: fortniteFont;
-  src: url('../fonts/BurbankBigCondensed-Black.otf');
 }

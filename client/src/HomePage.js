@@ -3,7 +3,7 @@ import { Link, navigate } from "@reach/router";
 import Navbar from './Navbar';
 import Navshort from './Navshort';
 import axios from 'axios';
-//import Background from './Background.js';
+import Footer from './Footer';
 
 import { normalizeRarity, capFirst, selectImage, nameFiller } from './utils/index.js';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -40,14 +40,6 @@ class HomePage extends Component {
     alert(this.state.content);
   }
 
-
-  // getStats() {
-  //   axios.get(STATS_URL)
-  //     .then(res => {
-  //       console.log(res.data);
-  //   })
-  // }
-
   getData() {
     this.setState({ isLoading: true});
     axios.all([
@@ -78,7 +70,12 @@ class HomePage extends Component {
       dailyItems = this.state.items.daily.map((eachItem, i) =>
         <div className="item-wrapper" key={i}>    
           <Link to={`/ItemShop/${eachItem.id}`}>
-            <img src={eachItem.full_background} className="preview-img" alt="Fortnite shop preview" height="130" width="130"/>
+            <img 
+              src={eachItem.full_background} 
+              className="preview-img" 
+              alt="Fortnite shop preview" 
+              height="120" 
+              width="120"/>
           </Link>
         </div>
       );
@@ -92,8 +89,8 @@ class HomePage extends Component {
             src={selectImage(element.type) ? element.images.background : element.images.icon}
             onError={(e)=>{e.target.onerror = null; e.target.src="/Battle_Star_Icon.png"}} 
             className="preview-img"
-            height="110" 
-            width="110" 
+            height="120" 
+            width="120" 
             alt="reward preview"
           />      
           <div className="reward-description-preview">
@@ -140,9 +137,15 @@ class HomePage extends Component {
           <Navshort page={"Home"} link={"/"}/>
         </div>
         <div className="home-container">
+          <div className="home-title-wrapper">
+            <p className="home-title-paragraph">
+              FORTNITE PLUS
+            </p>
+          </div>
+        
           <div className="search-wrapper">
             <div className="search-title">
-              <p className="search-title-header">Find Your Fortnite Stats!</p>
+              <p className="search-title-header">Find Stats, Item Shop, Battle Pass, and More!</p>
             </div>
             <form 
               className="search-form"
@@ -178,16 +181,8 @@ class HomePage extends Component {
             <BattlePreview />
           </div> 
           }
-          <div className="home-credentials">
-            <div className="credentials-element">
-              <p>Created by: Neil Tengbumroong<br/>Date: July 2020<br />Epic ID: Neiliooo</p>
-            </div>
-            <div className="credentials-element">
-                <p>API provided by: <a href="https://fortniteapi.io/">FortniteAPI.io</a></p>
-            </div>
-          </div>
-      </div>
-            
+        </div>
+        <Footer />          
       </div>   
     )
   }

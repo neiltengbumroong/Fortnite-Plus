@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import Navshort from './Navshort';
+import Footer from './Footer';
 
 import './css/Miscellaneous.css';
 import './css/skeleton.css';
@@ -164,6 +165,7 @@ class Miscellaneous extends Component {
             </div>
           }        
         </div>
+        <Footer />
       </div>
     )
   }

@@ -57,7 +57,6 @@
 }
 
 .item-shop-header {
-  font-family: fortniteFont;
   font-size: 50px;
   text-align: center;
 }
@@ -68,6 +67,8 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  font-family: fortniteFont;
+  min-height: 100%;
 }
 
 /* --------------------- Item Shop Header --------------------- */
@@ -78,7 +79,6 @@
 }
 
 .stat-paragraph {
-  font-family: fortniteFont;
   font-size: 25px;
   margin-left: auto;
   margin-right: 2%;
@@ -94,7 +94,6 @@
 
 .item-buttons {
   display: flex;
-  font-family: fortniteFont;
 }
 
 .item-button {
@@ -102,7 +101,6 @@
   background: transparent;
   color: black;
   cursor: pointer;
-  font-family: fortniteFont;
   font-size: 25px;
   transition: 0.4s ease; 
 }
@@ -124,7 +122,6 @@
   background: transparent;
   color: white;
   cursor: black;
-  font-family: fortniteFont;
   font-size: 25px;
   background: transparent;
   box-shadow: inset 0 -2px 0 0 white;
@@ -133,10 +130,10 @@
 
 
 /* --------------------- Items: General --------------------- */
-.row-title {
+.shop-row-title {
   padding-left: 1%;
   background: rgb(255,206,0);
-  font-family: fortniteFont;
+  background: linear-gradient(90deg, rgba(255,206,0,1) 40%, rgba(255,237,159,1) 90%); 
 }
 
 .row-items {
@@ -162,7 +159,6 @@
 
 .item-description {
   text-align: center;
-  font-family: fortniteFont;
   font-size: 20px;
 }
 

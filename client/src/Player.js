@@ -6,6 +6,7 @@ import { chooseNameSize } from './utils/index.js';
 import { PieChart } from 'react-minimal-pie-chart';
 import { Link } from "@reach/router";
 import Navshort from './Navshort';
+import Footer from './Footer';
 
 import './css/skeleton.css';
 import './css/normalize.css';
@@ -380,7 +381,8 @@ class Player extends Component {
     const ErrorMessage = () => (
       <div className="error-background-wrapper">
         <div className="nav-container">  
-          <Navbar />
+            <Navbar />
+            <Navshort/>
         </div>
         <div className="error-message-wrapper">
           <p className="error-main">Sorry! Looks like something went wrong when retrieving your stats. This could be for a number of reasons, including:</p>
@@ -481,6 +483,7 @@ class Player extends Component {
             </div>         
           </div>
       }
+      <Footer />
       </div>
     )
   }

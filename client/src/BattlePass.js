@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import Navshort from './Navshort';
+import Footer from './Footer';
 
 import './css/skeleton.css';
 import './css/normalize.css';
@@ -143,7 +144,8 @@ class BattlePass extends Component {
             :   
             this.state.showPaid ? <PaidDiv /> : <FreeDiv />
           }
-        </div> 
+        </div>
+        <Footer />
       </div>
       
     )

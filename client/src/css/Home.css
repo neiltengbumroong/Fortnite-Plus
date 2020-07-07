@@ -1,18 +1,9 @@
-* {
-  box-sizing: border-box;
-} 
-
-.home-container {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-
 @media screen and (max-width: 480px) {
   div.background-wrapper {
     height: 100%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
   }
+
   p.search-title-header {
     font-size: 20px;
   }
@@ -35,15 +26,20 @@
     flex-wrap: wrap;
     justify-content: center !important; 
   }
+
+  div.footer-credentials {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 800px) {
 
   div.background-wrapper {
     height: 100%;
+    padding-bottom: 10%;
   }
   p.search-title-header {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   img.preview-img {
@@ -64,9 +60,24 @@
     justify-content: center !important;
     columns: 2 auto;
   }
+  
+  div.preview-element {
+    padding-bottom: 8%;
+  }
 
+  div.preview-row-wrapper {
+    display: initial;
+  }
 }
 
+* {
+  box-sizing: border-box;
+} 
+
+.home-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 .background-wrapper {
   background-image: url("/images/fortniteblue.jpg");
@@ -74,12 +85,12 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding-bottom: 1%;
+  font-family: fortniteFont;
 }
 
 .loading-screen {
   height: 100%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 /* --------------------- Fonts --------------------- */
@@ -88,8 +99,12 @@
   src: url('../fonts/BurbankBigCondensed-Black.otf');
 }
 
-
-
+/* --------------------- Title --------------------- */
+.home-title-wrapper {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
 
 /* --------------------- Search Bar --------------------- */
 
@@ -99,14 +114,12 @@
 }
 
 .search-title {
-  font-family: fortniteFont;
   text-align: center;
-  padding-top: 3%;
-  color: white;
+  color: black;
 }
 
 .search-title-header {
-  font-size: 50px;
+  font-size: 20px;
 }
 
 
@@ -214,6 +227,7 @@ input:focus {
 .preview-element {
   padding: 0 1.5%;
   padding-bottom: 1%;
+  white-space: nowrap;
 }
 
 .preview-button {
@@ -237,14 +251,23 @@ input:focus {
 
 /* --------------------- Credentials --------------------- */
 
-.home-credentials {
-  margin-top: 5%;
+.footer-credentials {
+  margin: 5% 5% 0;
   font-family: fortniteFont;
   display: flex;
   justify-content: space-between;
   padding: 1%;
   color: white;
+  font-size: 15px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.left-credentials-element {
+  text-align: left;
+}
+
+.right-credentials-element {
+  text-align: right;
 }
 
 

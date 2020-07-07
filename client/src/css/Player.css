@@ -13,7 +13,7 @@
   }
 
   p.title-stat {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   p.lifetime-stat {
@@ -44,6 +44,16 @@
   button.chart-button,
   button.chart-button-active {
     font-size: 10px;
+  }
+
+  div.player-lifetime {
+    display: initial;
+  }
+
+  div.lifetime-box-wrapper {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
   }
 }
 
@@ -103,8 +113,9 @@
 
 .overall-stat-wrapper {
   margin-top: 4%;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: fortniteFont;
 }
 
 .player-lifetime {
@@ -128,8 +139,8 @@
 }
 
 .main-title {
-  font-family: fortniteFont;
   color: white;
+  text-align: center;
 }
 
 .main-name-large {
@@ -152,7 +163,6 @@
 
 /* --------------------- Overview --------------------- */
 .overview-title {
-  font-family: fortniteFont;
   font-size: 30px;
   text-align: center;
   padding: 0;
@@ -178,9 +188,7 @@
 }
 
 .title-box {
-  margin: 0 auto;
-  font-family: fortniteFont;
-  
+  margin: 0 auto;  
 }
 
 .title-header {
@@ -212,7 +220,7 @@
 }
 
 .lifetime-title {
-  font-family: fortniteFont;
+
   font-size: 30px;
   width: 100%;
   padding: 0;
@@ -222,7 +230,6 @@
 }
 
 .lifetime-stat-box {
-  font-family: fortniteFont;
   font-size: 30px;
   margin-left: 3%;
   break-inside: avoid-column;
@@ -250,7 +257,6 @@
   background: transparent;
   color: black;
   cursor: pointer;
-  font-family: fortniteFont;
   font-size: 25px;
   transition: 0.4s ease; 
 }
@@ -272,7 +278,6 @@
   background: transparent;
   color: white;
   cursor: black;
-  font-family: fortniteFont;
   font-size: 25px;
   background: transparent;
   box-shadow: inset 0 -2px 0 0 white;
@@ -286,7 +291,6 @@
 }
 
 .chart-title {
-  font-family: fortniteFont;
   text-align: center;
   padding-top: 2%;
 }
@@ -320,7 +324,6 @@
 }
 
 .mode-title {
-  font-family: fortniteFont;
   font-size: 30px;
   width: 100%;
   padding: 0;
@@ -349,7 +352,6 @@
 }
 
 .ind-stat-box {
-  font-family: fortniteFont;
   margin-left: 5%;
 }
 
@@ -375,11 +377,11 @@
 /* --------------------- Errors --------------------- */
 .error-message-wrapper {
   margin: 5% 20% 0%;
-  font-family: fortniteFont;
   font-size: 20px;
 }
 
 .error-background-wrapper {
+  font-family: fortniteFont;
   position: fixed;
   top: 0;
   left: 0;
@@ -398,7 +400,6 @@
 }
 
 .return-button {
-  font-family: fortniteFont;
   color: white;
   background-color: grey;
   text-align: center;
@@ -407,13 +408,12 @@
 }
 
 .return-button:hover {
-  background-color: slategray;
+  background-color: rgb(74, 98, 122);
   outline: 3px solid white;
 }
 
 .no-match-message {
   text-align: center;
-  font-family: fortniteFont;
   font-size: 25px;
   margin-top: 15%;
 }

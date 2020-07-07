@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import Navshort from './Navshort';
+import Footer from './Footer';
 
 import './css/Achievements.css';
 
@@ -74,6 +75,7 @@ class Achievements extends Component {
             </div>
           }
         </div>
+        <Footer />
       </div>
     )
   }

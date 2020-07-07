@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
 import Navshort from './Navshort';
+import Footer from './Footer';
 
 import './css/Challenge.css';
 import './css/skeleton.css';
@@ -117,8 +118,8 @@ class Challenge extends Component {
     return(
       <div className="challenge-background-wrapper">
         <div className="nav-container">  
-            <Navbar page={"Challenge"} />
-            <Navshort page={"Challenge"} link={"/Challenge"}/>
+            <Navbar page={"Challenges"} />
+            <Navshort page={"Challenges"} link={"/Challenge"}/>
         </div>
         <div className="challenges-box-wrapper">
           <div className="challenges-header">
@@ -135,7 +136,8 @@ class Challenge extends Component {
             :  
             this.state.showWeekly ? <Weekly/> : <Season />
           }       
-        </div>       
+        </div> 
+        <Footer/>      
       </div>
     )
   }

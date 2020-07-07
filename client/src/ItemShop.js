@@ -4,8 +4,8 @@ import Navbar from './Navbar';
 import Navshort from './Navshort';
 import { Link } from "@reach/router";
 import Countdown from './Countdown';
+import Footer from './Footer';
 
-// import './css/Home.css';
 import './css/ItemShop.css';
 import './css/skeleton.css';
 import './css/normalize.css';
@@ -141,19 +141,19 @@ class ItemShop extends Component {
     const Current = () => (
       <>
         <div className="item-shop-row-1">
-          <h5 className="row-title"> Featured Items</h5>
+          <h5 className="shop-row-title"> Featured Items</h5>
           <div className="row-items">
             {featuredItems}
           </div>        
         </div>
         <div className="item-shop-row-2">
-          <h5 className="row-title"> Daily Items</h5>
+          <h5 className="shop-row-title"> Daily Items</h5>
           <div className="row-items">
             {dailyItems}
           </div>     
         </div>
         <div className="item-shop-row-3">
-          <h5 className="row-title"> Special Items</h5>   
+          <h5 className="shop-row-title"> Special Items</h5>   
           <div className="row-items">
             {specialItems}
           </div>      
@@ -163,7 +163,7 @@ class ItemShop extends Component {
 
     const Upcoming = () => (
       <>
-        <h5 className="row-title"> Upcoming Items</h5>
+        <h5 className="shop-row-title"> Upcoming Items</h5>
         <div className="row-items">
           {upcomingItems}
         </div>
@@ -193,6 +193,7 @@ class ItemShop extends Component {
             this.state.showCurrent ? <Current /> : <Upcoming />
           }
         </div>
+        <Footer />
 
         {this.props.children}         
       </div>
