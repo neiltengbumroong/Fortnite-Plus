@@ -16,6 +16,6 @@ Built with a lot of things, including: <br>
 * [Node.js](https://nodejs.org/en/) <br>
 * [Express.js](https://expressjs.com/) <br>
 * [Reach Router](https://reach.tech/router/) <br>
-* [Fortnite API](ttps://fortniteapi.io/) <br>
+* [Fortnite API](https://fortniteapi.io/) <br>
 * [Heroku Deploy](https://dashboard.heroku.com/) <br>
 
