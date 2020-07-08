@@ -8,6 +8,10 @@ A website created to showcase anything and everything about the best (and coinci
 
 The website includes responsive CSS, making it both **web, tablet, and mobile-friendly**. Current support includes Samsung Galaxy 6-10, 20, iPhone 7, 7+, 8, 8+, X, XS, XS Max, Macbook Original/Pro/Air, and most Windows computers and desktops. 
 
+<p align="center">
+  <img src="FortniteDemo.gif" alt="alt text" width="500" height="300">
+ </p>
+
 Functions of the website include: <br>
 * Player Account and Global ID lookup
 * Detailed analysis of various player in-game statistics for all three game modes
