@@ -52,6 +52,10 @@ class BattlePass extends Component {
 
   componentDidMount() {
     this.getData();
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.w3counter.com/tracker.js?id=133254";
+    document.head.appendChild(script);
   }
 
   render() {

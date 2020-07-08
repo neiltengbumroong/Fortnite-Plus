@@ -26,6 +26,10 @@ class Item extends Component {
   
   componentDidMount() {
     this.getItemDetails();
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.w3counter.com/tracker.js?id=133254";
+    document.head.appendChild(script);
   }
 
   getItemDetails() {

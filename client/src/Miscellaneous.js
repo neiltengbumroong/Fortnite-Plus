@@ -69,6 +69,10 @@ class Miscellaneous extends Component {
   componentDidMount() {
     this.getData();
     this.countPatches();
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.w3counter.com/tracker.js?id=133254";
+    document.head.appendChild(script);
   }
 
   render() {
