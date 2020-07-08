@@ -1,6 +1,6 @@
 # Fortnite Plus
 
-A website created to showcase anything and everything about the best (and coincidentally my favorite) game in the world, Fortnite. The site functions as a stat tracker, item shop viewer, and much more. Fortnite Plus took about **6 weeks** to build entirely scratch, with API provided courtesty of [fortniteapi.io](https://fortniteapi.io/), and was original deployment was on July 7, 2020.
+A website created to showcase anything and everything about the best (and coincidentally my favorite) game in the world, Fortnite. The site functions as a stat tracker, item shop viewer, and much more. Fortnite Plus took about **6 weeks** to build entirely scratch, with API provided courtesy of [fortniteapi.io](https://fortniteapi.io/), and was original deployment was on July 7, 2020.
 
 <p align="center">
   <img src="FortniteHome.jpg" alt="alt text" width="500" height="300">
