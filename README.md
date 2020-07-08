@@ -5,6 +5,10 @@ A website created to showcase anything and everything about the best (and coinci
 <p align="center">
   <img src="FortniteHome.jpg" alt="alt text" width="500" height="300">
  </p>
+ 
+ <p align="center">
+  <img src="FortniteStats.jpg" alt="alt text" width="500" height="300">
+ </p>
 
 The website includes responsive CSS, making it both **web, tablet, and mobile-friendly**. Current support includes Samsung Galaxy 6-10, 20, iPhone 7, 7+, 8, 8+, X, XS, XS Max, Macbook Original/Pro/Air, and most Windows computers and desktops. 
 
