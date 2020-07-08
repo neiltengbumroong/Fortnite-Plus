@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Navshort from './Navshort';
 import axios from 'axios';
 import Footer from './Footer';
+import postscribe from 'postscribe';
 
 import { normalizeRarity, capFirst, selectImage, nameFiller } from './utils/index.js';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -58,6 +59,7 @@ class HomePage extends Component {
 
   componentDidMount() {
     this.getData();
+    //postscribe('#home-container', <script language="javascript" src="https://www.w3counter.com/tracker.js?id=133254"></script>);
   }
 
   render() {
@@ -137,6 +139,7 @@ class HomePage extends Component {
           <Navshort page={"Home"} link={"/"}/>
         </div>
         <div className="home-container">
+        <script src="https://www.w3counter.com/tracker.js?id=133254"></script>
           <div className="home-title-wrapper">
             <p className="home-title-paragraph">
               FORTNITE PLUS

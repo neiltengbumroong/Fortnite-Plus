@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 })
 
 const FortniteAPI = require("fortnite-api-io");
-const key = process.env.API_KEY;
+const key = process.env.API_KEY || 'c97426f1-ff25d9e3-d2f17b89-bc6cc459';
 const fortniteAPI = new FortniteAPI(key);
 
 

@@ -14,6 +14,7 @@
     "date-diff": "^0.2.2",
     "fortnite-api-io": "^1.4.1",
     "moment": "^2.27.0",
+    "postscribe": "^2.0.8",
     "pretty-ms": "^7.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
