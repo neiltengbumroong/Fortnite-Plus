@@ -140,19 +140,19 @@ class ItemShop extends Component {
 
     const Current = () => (
       <>
-        <div className="item-shop-row-1">
+        <div className="item-shop-row">
           <h5 className="shop-row-title"> Featured Items</h5>
           <div className="row-items">
             {featuredItems}
           </div>        
         </div>
-        <div className="item-shop-row-2">
+        <div className="item-shop-row">
           <h5 className="shop-row-title"> Daily Items</h5>
           <div className="row-items">
             {dailyItems}
           </div>     
         </div>
-        <div className="item-shop-row-3">
+        <div className="item-shop-row">
           <h5 className="shop-row-title"> Special Items</h5>   
           <div className="row-items">
             {specialItems}
