@@ -2,6 +2,8 @@
 
 A website created to showcase anything and everything about the best (and coincidentally my favorite) game in the world, Fortnite. The site functions as a stat tracker, item shop viewer, and much more. Fortnite Plus took about **6 weeks** to build entirely scratch, with API provided courtesty of [fortniteapi.io](https://fortniteapi.io/), and was original deployment was on July 7, 2020.
 
+<img src="FortniteHome.jpg" alt="alt text" width="500" height="300">
+
 The website includes responsive CSS, making it both **web, tablet, and mobile-friendly**. Current support includes Samsung Galaxy 6-10, 20, iPhone 7, 7+, 8, 8+, X, XS, XS Max, Macbook Original/Pro/Air, and most Windows computers and desktops. 
 
 Functions of the website include: <br>
