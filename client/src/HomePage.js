@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import Navshort from './Navshort';
 import axios from 'axios';
 import Footer from './Footer';
-import postscribe from 'postscribe';
 
 import { normalizeRarity, capFirst, selectImage, nameFiller } from './utils/index.js';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
