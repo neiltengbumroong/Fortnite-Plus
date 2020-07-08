@@ -59,7 +59,10 @@ class HomePage extends Component {
 
   componentDidMount() {
     this.getData();
-    //postscribe('#home-container', <script language="javascript" src="https://www.w3counter.com/tracker.js?id=133254"></script>);
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.w3counter.com/tracker.js?id=133254";
+    document.head.appendChild(script);
   }
 
   render() {
@@ -139,7 +142,6 @@ class HomePage extends Component {
           <Navshort page={"Home"} link={"/"}/>
         </div>
         <div className="home-container">
-        <script src="https://www.w3counter.com/tracker.js?id=133254"></script>
           <div className="home-title-wrapper">
             <p className="home-title-paragraph">
               FORTNITE PLUS
