@@ -136,7 +136,6 @@ input:focus {
 .search-form {
   display: flex;
   flex-direction: row;
-  padding: 2px;
 }
 
 .search-input {
@@ -157,6 +156,7 @@ input:focus {
   border-left: none;
   text-align: center;
   padding: 12px;
+  margin-left: -20%;
   color: black;
   background-color: white;
 }
