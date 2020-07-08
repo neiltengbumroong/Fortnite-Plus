@@ -145,7 +145,7 @@ class HomePage extends Component {
         
           <div className="search-wrapper">
             <div className="search-title">
-              <p className="search-title-header">Find Stats, Item Shop, Battle Pass, and More!</p>
+              <p className="search-title-header">Find Player Stats, Daily Items, Battle Pass Rewards, and More!</p>
             </div>
             <form 
               className="search-form"
