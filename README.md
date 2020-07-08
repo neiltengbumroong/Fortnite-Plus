@@ -1,6 +1,8 @@
 # Fortnite Plus
 
-A website created to showcase anything and everything about the best (and coincidentally my favorite) game in the world, Fortnite. The site functions as a stat tracker, item shop viewer, and much more. Fortnite Plus took about 6 weeks to build entirely scratch, with API provided courtesty of [fortniteapi.io](https://fortniteapi.io/), and was original deployment was on July 7, 2020.
+A website created to showcase anything and everything about the best (and coincidentally my favorite) game in the world, Fortnite. The site functions as a stat tracker, item shop viewer, and much more. Fortnite Plus took about **6 weeks** to build entirely scratch, with API provided courtesty of [fortniteapi.io](https://fortniteapi.io/), and was original deployment was on July 7, 2020.
+
+The website includes responsive CSS, making it both **web, tablet, and mobile-friendly**. Current support includes Samsung Galaxy 6-10, 20, iPhone 7, 7+, 8, 8+, X, XS, XS Max, Macbook Original/Pro/Air, and most Windows computers and desktops. 
 
 Functions of the website include: <br>
 * Player Account and Global ID lookup
@@ -12,7 +14,7 @@ Functions of the website include: <br>
 * Showcase of miscellaneous statistics, such as all game maps and POIs
 
 Built with a lot of things, including: <br>
-* [React](https://reactjs.org/) <br>
+* [React.js](https://reactjs.org/) <br>
 * [Node.js](https://nodejs.org/en/) <br>
 * [Express.js](https://expressjs.com/) <br>
 * [Reach Router](https://reach.tech/router/) <br>
